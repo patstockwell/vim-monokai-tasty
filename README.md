@@ -18,3 +18,5 @@ Add the following to your `.vimrc` and run `PlugInstall`
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'pangloss/vim-javascript'
 ```
+
+![](./example.png)
