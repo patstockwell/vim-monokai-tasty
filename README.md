@@ -6,7 +6,7 @@ It focuses mostly on Javascript highlighting, although there are bindings for th
 
 ## Dependencies
 This plugin works best with a terminal that can render italic text. It will work just fine on terminals that can't, the italic text will appear in inverted colours (black text on blue background for example).
-This colour scheme also makes use of syntax definitions from [`vim/pangloss`](https://github.com/pangloss/vim-javascript). This VIM syntax file for javascript is a dependency for the _vim-monokai-tasty_ colour scheme.
+This colour scheme also makes use of syntax definitions from [`vim/pangloss`](https://github.com/pangloss/vim-javascript). The _vim/panglass_ syntax file for javascript is a dependency for the _vim-monokai-tasty_ colour scheme.
 
 ## Installation
 
@@ -18,5 +18,15 @@ Add the following to your `.vimrc` and run `PlugInstall`
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'pangloss/vim-javascript'
 ```
+
+## Use
+
+Add to your `.vimrc`:
+
+```
+colorscheme vim-monokai-tasty
+```
+
+## Screen shots
 
 ![](./example.png)
