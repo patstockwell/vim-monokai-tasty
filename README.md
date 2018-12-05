@@ -29,4 +29,6 @@ colorscheme vim-monokai-tasty
 
 ## Screen shots
 
-![](./example.png)
+![](./example1.png)
+![](./example2.png)
+![](./example3.png)
