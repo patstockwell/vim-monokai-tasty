@@ -11,11 +11,11 @@ Add the following to your `.vimrc` and run `PlugInstall`
 
 ```javascript
 Plug 'patstockwell/vim-monokai-tasty'
-Plug 'pangloss/vim-javascript'
 ```
 
-A few optional extras if you write React
+Works best with these if you write javascript or React
 ```javascript
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components'
 ```
