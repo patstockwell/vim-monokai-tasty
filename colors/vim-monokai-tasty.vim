@@ -173,6 +173,7 @@ exec "hi jsUndefined" . s:fg . s:purple . s:style . "NONE"
 exec "hi jsParens" . s:fg . s:white . s:style . "NONE"
 exec "hi jsFuncParens" . s:fg . s:white . s:style . "NONE"
 exec "hi jsGlobalObjects" . s:fg . s:light_blue . s:style . "NONE"
+exec "hi jsFunction" . s:fg . s:light_blue . s:style . "italic"
 
 hi def link jsImport               Include
 hi def link jsExport               Include
@@ -204,7 +205,6 @@ hi def link jsFinally              Exception
 hi def link jsCatch                Exception
 hi def link jsAsyncKeyword         Keyword
 hi def link jsForAwait             Keyword
-hi def link jsFunction             Type
 hi def link jsObjectFuncName       Function
 hi def link jsError                Error
 hi def link jsParensError          Error
