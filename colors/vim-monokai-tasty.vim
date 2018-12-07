@@ -8,7 +8,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "tastySublime"
+let g:colors_name = "vim-monokai-tasty"
 
 " prefix with s: for local script-only functions or variables
 
@@ -93,9 +93,9 @@ exec "hi PreProc"           . s:fg . s:magenta . s:style . "NONE"
 exec "hi Statement"         . s:fg . s:magenta . s:style . "NONE"
 exec "hi Repeat"            . s:fg . s:magenta . s:style . "NONE"
 
-exec "hi SpecialKey"        . s:fg . s:dark_grey    . s:bg . s:darker_grey . s:style . "NONE"
-exec "hi IncSearch"         . s:fg . "NONE"         . s:bg . s:darker_grey      . s:style . "bold,underline"
-exec "hi Search"            . s:fg . "NONE"         . s:bg . s:darker_grey      . s:style . "bold,underline"
+exec "hi SpecialKey"        . s:fg . s:dark_grey    . s:bg . s:darker_grey      . s:style . "NONE"
+exec "hi IncSearch"         . s:fg . s:white        . s:bg . s:purple           . s:style . "bold,underline"
+exec "hi Search"            . s:fg . s:white        . s:bg . s:purple           . s:style . "bold,underline"
 
 exec "hi Identifier"        . s:fg . s:light_blue                               . s:style . "NONE"
 exec "hi Question"          . s:fg . s:light_blue . s:style . "NONE"
