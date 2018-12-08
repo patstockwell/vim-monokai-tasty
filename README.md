@@ -39,6 +39,3 @@ let g:vim_monokai_tasty_italic = 1
 ![](./example2.png)
 ![](./example3.png)
 
-## :hammer: Dependencies
-This colour scheme also makes use of syntax definitions from [`vim/pangloss`](https://github.com/pangloss/vim-javascript). The _vim/panglass_ syntax file for javascript is a dependency for the _vim-monokai-tasty_ colour scheme.
-
