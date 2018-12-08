@@ -1,4 +1,4 @@
-# vim-monokai-tasty.vim
+# vim-monokai-tasty
 
 Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour scheme makes use of cterm color numbers to support VIM running on a wide range of systems.
 It has been customised for Javascript highlighting, but works for all languages :heart:
@@ -28,6 +28,11 @@ Add to your `.vimrc`:
 colorscheme vim-monokai-tasty
 ```
 
+If you use a terminal that supports italic text, also add
+```
+let g:vim_monokai_tasty_italic = 1
+```
+
 ## :tv: Screen shots
 
 ![](./example1.png)
@@ -35,6 +40,5 @@ colorscheme vim-monokai-tasty
 ![](./example3.png)
 
 ## :hammer: Dependencies
-This plugin works best with a terminal that can render italic text. It will work just fine on terminals that can't, the italic text will appear in inverted colours (black text on blue background for example).
 This colour scheme also makes use of syntax definitions from [`vim/pangloss`](https://github.com/pangloss/vim-javascript). The _vim/panglass_ syntax file for javascript is a dependency for the _vim-monokai-tasty_ colour scheme.
 

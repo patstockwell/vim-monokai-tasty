@@ -10,6 +10,17 @@ endif
 
 let g:colors_name = "vim-monokai-tasty"
 
+" User Options
+if !exists("g:vim_monokai_tasty_italic")
+    let g:vim_monokai_tasty_italic = 0
+endif
+
+if g:vim_monokai_tasty_italic
+  let s:italic = "italic"
+else
+  let s:italic = "NONE"
+endif
+
 " prefix with s: for local script-only functions or variables
 
 let s:fg = " ctermfg=" " foreground
@@ -99,7 +110,7 @@ exec "hi Search"            . s:fg . s:white        . s:bg . s:purple           
 
 exec "hi Identifier"        . s:fg . s:light_blue                               . s:style . "NONE"
 exec "hi Question"          . s:fg . s:light_blue . s:style . "NONE"
-exec "hi StorageClass"      . s:fg . s:light_blue                               . s:style . "italic"
+exec "hi StorageClass"      . s:fg . s:light_blue                               . s:style . s:italic
 exec "hi Structure"         . s:fg . s:light_blue . s:style . "NONE"
 
 exec "hi Function"          . s:fg . s:light_green . s:style . "NONE"
@@ -109,7 +120,7 @@ exec "hi Directory"         . s:fg . s:purple . s:style . "NONE"
 exec "hi Tag"               . s:fg . s:purple . s:style . "NONE"
 
 exec "hi Folded"            . s:fg . s:grey         . s:bg . s:charcoal
-exec "hi Comment"           . s:fg . s:grey                                     . s:style . "italic"
+exec "hi Comment"           . s:fg . s:grey                                     . s:style . s:italic
 
 exec "hi Boolean"           . s:fg . s:purple . s:style . "NONE"
 exec "hi Character"         . s:fg . s:purple . s:style . "NONE"
@@ -145,7 +156,7 @@ hi def link jsTemplateString       String
 hi def link jsObjectStringKey      String
 hi def link jsClassStringKey       String
 exec "hi jsArrowFunction"         . s:fg . s:light_blue . s:style . "NONE"
-exec "hi jsArrowFuncArgs"         . s:fg . s:orange . s:style . "italic"
+exec "hi jsArrowFuncArgs"         . s:fg . s:orange . s:style . s:italic
 hi def link jsStorageClass         StorageClass
 hi def link jsNumber               Number
 
@@ -165,10 +176,10 @@ exec "hi jsDestructuringBraces" . s:fg . s:white . s:style . "NONE"
 exec "hi jsFuncName" . s:fg . s:light_green . s:style . "NONE"
 exec "hi jsFuncCall" . s:fg . s:light_blue . s:style . "NONE"
 exec "hi jsClassFuncName" . s:fg . s:light_green . s:style . "NONE"
-exec "hi jsArguments" . s:fg . s:orange . s:style . "italic"
-exec "hi jsFuncArgs" . s:fg . s:orange . s:style . "italic"
-exec "hi jsClassKeyword" . s:fg . s:light_blue . s:style . "italic"
-exec "hi jsThis" . s:fg . s:orange . s:style . "italic"
+exec "hi jsArguments" . s:fg . s:orange . s:style . s:italic
+exec "hi jsFuncArgs" . s:fg . s:orange . s:style .  s:italic
+exec "hi jsClassKeyword" . s:fg . s:light_blue . s:style .  s:italic
+exec "hi jsThis" . s:fg . s:orange . s:style .  s:italic
 exec "hi jsUndefined" . s:fg . s:purple . s:style . "NONE"
 exec "hi jsParens" . s:fg . s:white . s:style . "NONE"
 exec "hi jsFuncParens" . s:fg . s:white . s:style . "NONE"
