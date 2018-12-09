@@ -284,6 +284,10 @@ exec "hi xmlTagName" . s:fg . s:light_blue
 exec "hi xmlEndTag" . s:fg . s:light_blue
 exec "hi xmlEqual" . s:fg . s:magenta
 
+" JSON highlighting
+exec "hi jsonKeyword" . s:fg . s:light_blue
+exec "hi jsonString" . s:fg . s:pale_yellow
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
