@@ -184,7 +184,8 @@ exec "hi jsUndefined" . s:fg . s:purple . s:style . "NONE"
 exec "hi jsParens" . s:fg . s:white . s:style . "NONE"
 exec "hi jsFuncParens" . s:fg . s:white . s:style . "NONE"
 exec "hi jsGlobalObjects" . s:fg . s:light_blue . s:style . "NONE"
-exec "hi jsFunction" . s:fg . s:light_blue . s:style . "italic"
+exec "hi jsFunction" . s:fg . s:light_blue . s:style . s:italic
+exec "hi jsClassMethodType" . s:fg . s:light_blue . s:style . s:italic
 
 hi def link jsImport               Include
 hi def link jsExport               Include
@@ -255,7 +256,6 @@ hi def link jsSpreadOperator       Operator
 hi def link jsRestOperator         Operator
 hi def link jsRestExpression       jsFuncArgs
 hi def link jsSwitchColon          Noise
-hi def link jsClassMethodType      Type
 hi def link jsObjectMethodType     Type
 hi def link jsClassDefinition      jsFuncName
 hi def link jsBlockLabel           Identifier
