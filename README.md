@@ -34,11 +34,6 @@ If you use a terminal that supports italic text, add
 let g:vim_monokai_tasty_italic = 1
 ```
 
-If colours aren't showing, try also adding
-```
-set notermguicolors
-```
-
 ## :tv: Screen shots
 
 ![](./example1.png)
