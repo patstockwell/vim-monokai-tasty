@@ -16,177 +16,192 @@ if !exists("g:vim_monokai_tasty_italic")
 endif
 
 if g:vim_monokai_tasty_italic
-  let s:italic = "italic"
+  let s:italic = { "cterm": "italic", "gui": "italic" }
 else
-  let s:italic = "NONE"
+  let s:italic = { "cterm": "none", "gui": "none" }
 endif
 
-" prefix with s: for local script-only functions or variables
+let s:yellow = { "cterm": 228, "gui": "#E7DC6D" }
+let s:purple = { "cterm": 141, "gui": "#AC7CFF" }
+let s:light_green = { "cterm": 148, "gui": "#A4E400" }
+let s:light_blue = { "cterm": 81, "gui": "#62D8F1" }
+let s:magenta = { "cterm": 197, "gui": "#FC1A70" }
+let s:orange = { "cterm": 208, "gui": "#FF9700" }
 
-let s:fg = " ctermfg=" " foreground
-let s:bg = " ctermbg=" " background
-let s:style = " cterm="
+let s:white = { "cterm": 231, "gui": "#ffffff" }
+let s:light_grey = { "cterm": 250, "gui": "#bcbcbc" }
+let s:grey = { "cterm": 245, "gui": "#8a8a8a" }
+let s:dark_grey = { "cterm": 59, "gui": "#5f5f5f" }
+let s:darker_grey = { "cterm": 238, "gui": "#444444" }
+let s:charcoal = { "cterm": 235, "gui": "#262626" }
+let s:danger = { "cterm": 197, "gui": "#ff005f" }
+let s:olive = { "cterm": 64, "gui": "#5f8700" }
+let s:dark_red = { "cterm": 88, "gui": "#870000" }
+let s:blood_red = { "cterm": 52, "gui": "#5f0000" }
+let s:dark_green = { "cterm": 22, "gui": "#005f00" }
+let s:light_sea_blue = { "cterm": 33, "gui": "#0087ff" }
+let s:sea_blue = { "cterm": 25, "gui": "#005faf" }
 
-let s:yellow = 228
-let s:purple = 141
-let s:light_green = 148
-let s:light_blue = 81
-let s:magenta = 197
-let s:orange = 208
+let s:none = { "cterm": "none", "gui": "none" }
+let s:bold = { "cterm": "bold", "gui": "bold" }
+let s:underline = { "cterm": "underline", "gui": "underline" }
+let s:bold_underline = { "cterm": "bold,underline", "gui": "bold,underline" }
 
-let s:white = 231
-let s:light_grey = 250
-let s:grey = 245
-let s:dark_grey = 59
-let s:darker_grey = 238
-let s:charcoal = 235
-let s:pale_yellow = 186
-let s:danger = 197
-let s:olive = 64
-let s:dark_red = 88
-let s:blood_red = 52
-let s:dark_green = 22
-let s:light_sea_blue = 33
-let s:sea_blue = 25
+function! Highlight(group, fg, bg, style)
+  exec "hi " . a:group
+        \ . " ctermfg=" . a:fg["cterm"]
+        \ . " ctermbg=" . a:bg["cterm"]
+        \ . " cterm=" . a:style["cterm"]
+        \ . " guifg=" . a:fg["gui"]
+        \ . " guibg=" . a:bg["gui"]
+        \ . " gui=" . a:style["gui"]
+endfunction
 
-let s:none = " ctermfg=NONE ctermbg=NONE cterm=NONE"
+call Highlight("vimParenSep", s:white, s:none, s:bold)
+call Highlight("vimOperParen", s:light_blue, s:none, s:italic)
+call Highlight("vimUserFunc", s:purple, s:none, s:none)
+call Highlight("vimFunction", s:orange, s:none, s:none)
 
-exec "hi Cursor"            . s:fg . s:charcoal     . s:bg . s:light_blue . s:style . "NONE"
+call Highlight("Cursor", s:charcoal, s:light_blue, s:none)
 
-exec "hi Normal"            . s:fg . s:white        . s:bg . s:charcoal . s:style . "NONE"
-exec "hi Special"           . s:fg . s:purple . s:style . "NONE"
-exec "hi Title"             . s:fg . s:white                                    . s:style . "bold"
+call Highlight("Normal", s:white, s:charcoal, s:none)
+call Highlight("Normal", s:white, s:charcoal, s:none)
+call Highlight("Special", s:purple, s:none, s:none)
+call Highlight("Title", s:white, s:none, s:bold)
 
-exec "hi DiffChange"        . s:fg . s:white        . s:bg . s:sea_blue . s:style . "NONE"
-exec "hi DiffText"          . s:fg . s:white        . s:bg . s:light_sea_blue . s:style . "NONE"
-exec "hi DiffDelete"        . s:fg . s:dark_red     . s:bg . s:blood_red . s:style . "NONE"
-exec "hi DiffAdd"           . s:fg . s:white        . s:bg . s:dark_green . s:style . "NONE"
+call Highlight("DiffChange", s:white, s:sea_blue, s:none)
+call Highlight("DiffText", s:white, s:light_sea_blue, s:none)
+call Highlight("DiffDelete", s:dark_red, s:blood_red, s:none)
+call Highlight("DiffAdd", s:white, s:dark_green, s:none)
 
-exec "hi Error"             . s:fg . s:white        . s:bg . s:danger . s:style . "NONE"
-exec "hi ErrorMsg"          . s:fg . s:white        . s:bg . s:danger . s:style . "NONE"
-exec "hi WarningMsg"        . s:fg . s:white        . s:bg . s:danger . s:style . "NONE"
-exec "hi SpellBad"        . s:fg . s:white        . s:bg . s:danger . s:style . "NONE"
-exec "hi SpellRare"        . s:fg . s:white        . s:bg . s:danger . s:style . "NONE"
+call Highlight("Error", s:white, s:danger, s:none)
+call Highlight("ErrorMsg", s:white, s:danger, s:none)
+call Highlight("WarningMsg", s:white, s:danger, s:none)
+call Highlight("SpellBad", s:white, s:danger, s:none)
+call Highlight("SpellRare", s:white, s:danger, s:none)
 
-exec "hi CursorLineNR"      . s:fg . s:pale_yellow . s:style . "NONE"
+call Highlight("CursorLineNR", s:yellow, s:none, s:none)
 
-exec "hi CursorColumn"      . s:none
-exec "hi ColorColumn"       . s:none
-exec "hi Conceal"           . s:none
-exec "hi CursorLine"        . s:none
-exec "hi ColorColumn"       . s:none
-exec "hi Type"              . s:none
+call Highlight("CursorColumn", s:none, s:none, s:none)
+call Highlight("ColorColumn", s:none, s:none, s:none)
+call Highlight("Conceal", s:none, s:none, s:none)
+call Highlight("CursorLine", s:none, s:none, s:none)
+call Highlight("Type", s:none, s:none, s:none)
 
-exec "hi Visual "                                   . s:bg . s:dark_grey . s:style . "NONE"
-exec "hi TabLine"           . s:fg . s:light_grey   . s:bg . s:dark_grey        . s:style . "underline"
+call Highlight("Visual", s:none, s:dark_grey, s:none)
+call Highlight("TabLine", s:light_grey, s:dark_grey, s:underline)
+call Highlight("Whitespace", s:dark_grey, s:none, s:none)
 
-exec "hi TabLineSel"                                . s:bg . s:charcoal         . s:style . "bold"
+call Highlight("TabLineSel", s:none, s:charcoal, s:bold)
 
-exec "hi SignColumn"        . s:fg . s:grey         . s:bg . s:darker_grey . s:style . "NONE"
-exec "hi NonText"           . s:fg . s:darker_grey . s:style . "NONE"
-exec "hi TabLineFill"                               . s:bg . s:darker_grey      . s:style . "NONE"
-exec "hi LineNr"            . s:fg . s:darker_grey . s:style . "NONE"
-exec "hi VertSplit"         . s:fg . s:darker_grey  . s:bg . s:charcoal         . s:style . "NONE"
-exec "hi StatusLine"        . s:fg . s:white        . s:bg . s:darker_grey      . s:style . "NONE"
-exec "hi StatusLineNC"      . s:fg . s:white        . s:bg . s:darker_grey      . s:style . "NONE"
+call Highlight("SignColumn", s:grey, s:darker_grey, s:none)
+call Highlight("NonText", s:darker_grey, s:none, s:none)
+call Highlight("TabLineFill", s:none, s:darker_grey, s:none)
+call Highlight("LineNr", s:darker_grey, s:none, s:none)
+call Highlight("VertSplit", s:darker_grey, s:charcoal, s:none)
+call Highlight("StatusLine", s:white, s:darker_grey, s:none)
+call Highlight("StatusLineNC", s:white, s:darker_grey, s:none)
 
-exec "hi Exception"         . s:fg . s:magenta                                  . s:style . "bold"
-exec "hi MatchParen"        . s:fg . s:magenta      . s:bg . "NONE"             . s:style . "underline"
-exec "hi Include"           . s:fg . s:magenta . s:style . "NONE"
-exec "hi Conditional"       . s:fg . s:magenta . s:style . "NONE"
-exec "hi Define"            . s:fg . s:magenta . s:style . "NONE"
-exec "hi Debug"             . s:fg . s:magenta . s:style . "NONE"
-exec "hi Delimiter"         . s:fg . s:magenta . s:style . "NONE"
-exec "hi Keyword"           . s:fg . s:magenta . s:style . "NONE"
-exec "hi Macro"             . s:fg . s:magenta . s:style . "NONE"
-exec "hi Operator"          . s:fg . s:magenta . s:style . "NONE"
-exec "hi PreProc"           . s:fg . s:magenta . s:style . "NONE"
-exec "hi Statement"         . s:fg . s:magenta . s:style . "NONE"
-exec "hi Repeat"            . s:fg . s:magenta . s:style . "NONE"
+call Highlight("Exception", s:magenta, s:none, s:bold)
+call Highlight("MatchParen", s:magenta, s:none, s:underline)
+call Highlight("Include", s:magenta, s:none, s:none)
+call Highlight("Conditional", s:magenta, s:none, s:none)
+call Highlight("Define", s:magenta, s:none, s:none)
+call Highlight("Debug", s:magenta, s:none, s:none)
+call Highlight("Delimiter", s:magenta, s:none, s:none)
+call Highlight("Keyword", s:magenta, s:none, s:none)
+call Highlight("Macro", s:magenta, s:none, s:none)
+call Highlight("Operator", s:magenta, s:none, s:none)
+call Highlight("PreProc", s:magenta, s:none, s:none)
+call Highlight("Statement", s:magenta, s:none, s:none)
+call Highlight("Repeat", s:magenta, s:none, s:none)
 
-exec "hi SpecialKey"        . s:fg . s:dark_grey    . s:bg . s:darker_grey      . s:style . "NONE"
-exec "hi IncSearch"         . s:fg . s:white        . s:bg . s:purple           . s:style . "bold,underline"
-exec "hi Search"            . s:fg . s:white        . s:bg . s:purple           . s:style . "bold,underline"
+call Highlight("SpecialKey", s:dark_grey, s:darker_grey, s:none)
+call Highlight("IncSearch", s:white, s:purple, s:bold_underline)
+call Highlight("Search", s:white, s:purple, s:bold_underline)
 
-exec "hi Identifier"        . s:fg . s:light_blue                               . s:style . "NONE"
-exec "hi Question"          . s:fg . s:light_blue . s:style . "NONE"
-exec "hi StorageClass"      . s:fg . s:light_blue                               . s:style . s:italic
-exec "hi Structure"         . s:fg . s:light_blue . s:style . "NONE"
+call Highlight("Identifier", s:light_blue, s:none, s:none)
+call Highlight("Question", s:light_blue, s:none, s:none)
+call Highlight("StorageClass", s:light_blue, s:none, s:italic)
+call Highlight("Structure", s:light_blue, s:none, s:none)
 
-exec "hi Function"          . s:fg . s:light_green . s:style . "NONE"
+call Highlight("Function", s:light_green, s:none, s:none)
 
-exec "hi Constant"          . s:fg . s:purple . s:style . "NONE"
-exec "hi Directory"         . s:fg . s:purple . s:style . "NONE"
-exec "hi Tag"               . s:fg . s:purple . s:style . "NONE"
+call Highlight("Constant", s:purple, s:none, s:none)
+call Highlight("Directory", s:purple, s:none, s:none)
+call Highlight("Tag", s:purple, s:none, s:none)
+call Highlight("Boolean", s:purple, s:none, s:none)
+call Highlight("Character", s:purple, s:none, s:none)
+call Highlight("Float", s:purple, s:none, s:none)
+call Highlight("Number", s:purple, s:none, s:none)
 
-exec "hi Folded"            . s:fg . s:grey         . s:bg . s:charcoal
-exec "hi Comment"           . s:fg . s:grey                                     . s:style . s:italic
+call Highlight("Folded", s:grey, s:charcoal, s:none)
+call Highlight("Comment", s:grey, s:none, s:italic)
 
-exec "hi Boolean"           . s:fg . s:purple . s:style . "NONE"
-exec "hi Character"         . s:fg . s:purple . s:style . "NONE"
-exec "hi Float"             . s:fg . s:purple . s:style . "NONE"
-exec "hi Number"            . s:fg . s:purple . s:style . "NONE"
+call Highlight("Label", s:yellow, s:none, s:none)
+call Highlight("String", s:yellow, s:none, s:none)
 
-exec "hi Label"             . s:fg . s:yellow . s:style . "NONE"
-exec "hi String"            . s:fg . s:yellow . s:style . "NONE"
+call Highlight("Todo", s:yellow, s:dark_grey, s:bold)
+call Highlight("Underlined", s:none, s:none, s:underline)
 
-exec "hi Todo"              . s:fg . s:yellow        . s:bg . s:dark_grey            . s:style . "bold"
-exec "hi Underlined"                                                                . s:style . "underline"
-
-exec "hi Pmenu"             . s:fg . s:light_blue   . s:bg . s:darker_grey . s:style . "NONE"
-exec "hi PmenuSel"          . s:fg . s:yellow       . s:bg . s:dark_grey . s:style . "NONE"
-exec "hi PmenuSbar"                                 . s:bg . s:grey . s:style . "NONE"
-exec "hi PmenuThumb"                                . s:bg . s:white . s:style . "NONE"
+call Highlight("Pmenu", s:light_blue, s:darker_grey, s:none)
+call Highlight("PmenuSel", s:yellow, s:dark_grey, s:none)
+call Highlight("PmenuSbar", s:none, s:grey, s:none)
+call Highlight("PmenuThumb", s:none, s:white, s:none)
 
 " Javascript syntax overwrites from vim-javascript plugin
 syntax region  jsObject             contained matchgroup=jsObjectBraces        start=/{/  end=/}/  contains=jsObjectKey,jsObjectKeyString,jsObjectKeyComputed,jsObjectShorthandProp,jsObjectSeparator,jsObjectFuncName,jsObjectMethodType,jsGenerator,jsComment,jsObjectStringKey,jsSpreadExpression,jsTemplateString,jsDecorator,jsAsyncKeyword extend fold
 
 " Javascript colour highlighting rules
-exec "hi Noise"             . s:fg . s:magenta . s:style . "NONE"
+call Highlight("Noise", s:magenta, s:none, s:none)
+call Highlight("jsParensIfElse", s:white, s:none, s:none)
+call Highlight("jsParensRepeat", s:white, s:none, s:none)
+call Highlight("jsParensSwitch", s:white, s:none, s:none)
+call Highlight("jsParensCatch", s:white, s:none, s:none)
+
+call Highlight("jsArrowFunction", s:light_blue, s:none, s:none)
+call Highlight("jsArrowFuncArgs", s:orange, s:none, s:italic)
+
+call Highlight("jsBrackets", s:light_green, s:none, s:none)
+call Highlight("jsBraces", s:white, s:none, s:none)
+call Highlight("jsFuncBraces", s:white, s:none, s:none)
+call Highlight("jsClassBraces", s:white, s:none, s:none)
+call Highlight("jsIfElseBraces", s:white, s:none, s:none)
+
+call Highlight("jsTryCatchBraces", s:white, s:none, s:none)
+call Highlight("jsModuleBraces", s:white, s:none, s:none)
+call Highlight("jsObjectBraces", s:white, s:none, s:none)
+call Highlight("jsFinallyBraces", s:white, s:none, s:none)
+call Highlight("jsRepeatBraces", s:white, s:none, s:none)
+call Highlight("jsSwitchBraces", s:white, s:none, s:none)
+call Highlight("jsTemplateBraces", s:white, s:none, s:none)
+
+call Highlight("jsDestructuringBraces", s:white, s:none, s:none)
+call Highlight("jsFuncName", s:light_green, s:none, s:none)
+call Highlight("jsFuncCall", s:light_blue, s:none, s:none)
+call Highlight("jsClassFuncName", s:light_green, s:none, s:none)
+call Highlight("jsArguments", s:orange, s:none, s:italic)
+call Highlight("jsFuncArgs", s:orange, s:none, s:italic)
+call Highlight("jsClassKeyword", s:light_blue, s:none, s:italic)
+
+call Highlight("jsThis", s:orange, s:none, s:italic)
+call Highlight("jsUndefined", s:purple, s:none, s:none)
+call Highlight("jsParens", s:white, s:none, s:none)
+call Highlight("jsFuncParens", s:white, s:none, s:none)
+call Highlight("jsGlobalObjects", s:light_blue, s:none, s:none)
+call Highlight("jsFunction", s:light_blue, s:none, s:italic)
+call Highlight("jsClassMethodType", s:light_blue, s:none, s:italic)
+
 hi def link jsComment              Comment
 hi def link jsEnvComment           Comment
-exec "hi jsParensIfElse"            . s:fg . s:white . s:style . "NONE"
-exec "hi jsParensRepeat"            . s:fg . s:white . s:style . "NONE"
-exec "hi jsParensSwitch"            . s:fg . s:white . s:style . "NONE"
-exec "hi jsParensCatch"             . s:fg . s:white . s:style . "NONE"
 hi def link jsCommentTodo          Todo
 hi def link jsString               String
 hi def link jsObjectKeyString      String
 hi def link jsTemplateString       String
 hi def link jsObjectStringKey      String
 hi def link jsClassStringKey       String
-exec "hi jsArrowFunction"         . s:fg . s:light_blue . s:style . "NONE"
-exec "hi jsArrowFuncArgs"         . s:fg . s:orange . s:style . s:italic
 hi def link jsStorageClass         StorageClass
 hi def link jsNumber               Number
-
-exec "hi jsBrackets"            . s:fg . s:light_green . s:style . "NONE"
-exec "hi jsBraces"            . s:fg . s:white . s:style . "NONE"
-exec "hi jsFuncBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsClassBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsIfElseBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsTryCatchBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsModuleBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsObjectBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsFinallyBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsRepeatBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsSwitchBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsTemplateBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsDestructuringBraces" . s:fg . s:white . s:style . "NONE"
-exec "hi jsFuncName" . s:fg . s:light_green . s:style . "NONE"
-exec "hi jsFuncCall" . s:fg . s:light_blue . s:style . "NONE"
-exec "hi jsClassFuncName" . s:fg . s:light_green . s:style . "NONE"
-exec "hi jsArguments" . s:fg . s:orange . s:style . s:italic
-exec "hi jsFuncArgs" . s:fg . s:orange . s:style .  s:italic
-exec "hi jsClassKeyword" . s:fg . s:light_blue . s:style .  s:italic
-exec "hi jsThis" . s:fg . s:orange . s:style .  s:italic
-exec "hi jsUndefined" . s:fg . s:purple . s:style . "NONE"
-exec "hi jsParens" . s:fg . s:white . s:style . "NONE"
-exec "hi jsFuncParens" . s:fg . s:white . s:style . "NONE"
-exec "hi jsGlobalObjects" . s:fg . s:light_blue . s:style . "NONE"
-exec "hi jsFunction" . s:fg . s:light_blue . s:style . s:italic
-exec "hi jsClassMethodType" . s:fg . s:light_blue . s:style . s:italic
-
 hi def link jsImport               Include
 hi def link jsExport               Include
 hi def link jsModuleComma          Operator
@@ -276,17 +291,16 @@ hi def link jsHtmlElemAttrs        Label
 hi def link jsHtmlElemFuncs        PreProc
 hi def link jsCssStyles            Label
 
-
 " XML highlighting.
 hi def link xmlTodo   Todo
-exec "hi xmlTag" . s:fg . s:light_blue
-exec "hi xmlTagName" . s:fg . s:light_blue
-exec "hi xmlEndTag" . s:fg . s:light_blue
-exec "hi xmlEqual" . s:fg . s:magenta
+call Highlight("xmlTag", s:light_blue, s:none, s:none)
+call Highlight("xmlTagName", s:light_blue, s:none, s:none)
+call Highlight("xmlEndTag", s:light_blue, s:none, s:none)
+call Highlight("xmlEqual", s:magenta, s:none, s:none)
 
 " JSON highlighting
-exec "hi jsonKeyword" . s:fg . s:light_blue
-exec "hi jsonString" . s:fg . s:pale_yellow
+call Highlight("jsonKeyword", s:light_blue, s:none, s:none)
+call Highlight("jsonString", s:yellow, s:none, s:none)
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
