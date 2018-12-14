@@ -9,12 +9,12 @@ I recommend using [Plug](https://github.com/junegunn/vim-plug).
 
 Add the following to your `.vimrc` and run `PlugInstall`
 
-```javascript
+```vim
 Plug 'patstockwell/vim-monokai-tasty'
 ```
 
 Works best with these if you write javascript or React
-```javascript
+```vim
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components'
@@ -25,12 +25,12 @@ Plug 'elzr/vim-json'
 
 Add to your `.vimrc`:
 
-```
+```vim
 colorscheme vim-monokai-tasty
 ```
 
 If you use a terminal that supports italic text, add
-```
+```vim
 let g:vim_monokai_tasty_italic = 1
 ```
 
