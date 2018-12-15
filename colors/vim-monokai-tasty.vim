@@ -302,6 +302,12 @@ call Highlight("xmlEqual", s:magenta, s:none, s:none)
 call Highlight("jsonKeyword", s:light_blue, s:none, s:none)
 call Highlight("jsonString", s:yellow, s:none, s:none)
 
+" NERDTree highlighting
+call Highlight("NERDTreeClosable", s:yellow, s:none, s:none)
+call Highlight("NERDTreeOpenable", s:yellow, s:none, s:none)
+call Highlight("NERDTreeDirSlash", s:light_blue, s:none, s:none)
+
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
