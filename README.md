@@ -3,7 +3,7 @@
 Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
 It works for all languages, and is particularly good for Javascript development :heart:
 
-![](./example3.png)
+![](./exampleTop.png)
 
 ## :electric_plug: Installation
 
@@ -51,4 +51,5 @@ let g:airline_theme='monokai_tasty'
 
 ![](./example1.png)
 ![](./example2.png)
+![](./example3.png)
 
