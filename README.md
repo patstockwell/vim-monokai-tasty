@@ -30,9 +30,10 @@ Add the following to your `.vimrc`:
 colorscheme vim-monokai-tasty
 ```
 
-If you use a terminal that supports italic text, add:
+If you use a terminal that supports italic text, add (before the colorscheme declaration):
 ```vim
 let g:vim_monokai_tasty_italic = 1
+colorscheme vim-monokai-tasty
 ```
 
 To use the included [lightline.vim](https://github.com/itchyny/lightline.vim) theme:
