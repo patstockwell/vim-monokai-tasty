@@ -1,7 +1,7 @@
 # vim-monokai-tasty
 
-Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour scheme makes use of cterm color numbers to support VIM running on a wide range of systems.
-It has been customised for Javascript highlighting, but works for all languages :heart:
+Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
+It works for all languages, and is particularly good for Javascript development :heart:
 
 ## :electric_plug: Installation
 
@@ -23,15 +23,21 @@ Plug 'elzr/vim-json'
 
 ## :wolf: Use
 
-Add to your `.vimrc`:
-
+Add the following to your `.vimrc`:
 ```vim
 colorscheme vim-monokai-tasty
 ```
 
-If you use a terminal that supports italic text, add
+If you use a terminal that supports italic text, add:
 ```vim
 let g:vim_monokai_tasty_italic = 1
+```
+
+To use the included [lightline.vim](https://github.com/itchyny/lightline.vim) theme:
+```vim
+let g:lightline = {
+      \ 'colorscheme': 'monokai_tasty',
+      \ }
 ```
 
 ## :tv: Screen shots

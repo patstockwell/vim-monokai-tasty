@@ -33,11 +33,11 @@ let s:palette.inactive.right = [
       \ s:add(s:charcoal, s:grey, 'none'),
       \ s:add(s:charcoal, s:dark_grey, 'none'),
       \ s:add(s:light_grey, s:dark_grey, 'none') ]
-let s:palette.insert.right = [
+let s:palette.command.right = [
       \ s:add(s:charcoal, s:light_blue, 'none'),
       \ s:add(s:charcoal, s:grey, 'none'),
       \ s:add(s:light_grey, s:dark_grey, 'none') ]
-let s:palette.command.right = [
+let s:palette.insert.right = [
       \ s:add(s:charcoal, s:light_green, 'none'),
       \ s:add(s:charcoal, s:grey, 'none'),
       \ s:add(s:light_grey, s:dark_grey, 'none') ]
@@ -54,13 +54,13 @@ let s:palette.replace.right = [
 let s:palette.normal.left = [
       \ s:add(s:yellow, s:darkest_grey, 'bold'),
       \ s:add(s:charcoal, s:yellow, 'none') ]
-let s:palette.insert.left =  [
+let s:palette.command.left =  [
       \ s:add(s:light_blue, s:darkest_grey, 'bold'),
       \ s:add(s:charcoal, s:light_blue, 'none') ]
 let s:palette.replace.left = [
       \ s:add(s:magenta, s:darkest_grey, 'bold'),
       \ s:add(s:charcoal, s:magenta, 'none') ]
-let s:palette.command.left = [
+let s:palette.insert.left = [
       \ s:add(s:light_green, s:darkest_grey, 'bold'),
       \ s:add(s:charcoal, s:light_green, 'none') ]
 let s:palette.visual.left = [
