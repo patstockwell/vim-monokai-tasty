@@ -40,6 +40,11 @@ let g:lightline = {
       \ }
 ```
 
+To use the included [vim-airline](https://github.com/vim-airline/vim-airline) theme:
+```vim
+let g:airline_theme='monokai_tasty'
+```
+
 ## :tv: Screen shots
 
 ![](./example1.png)
