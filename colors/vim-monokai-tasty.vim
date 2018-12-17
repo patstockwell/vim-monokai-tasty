@@ -82,10 +82,10 @@ call Highlight("SpellRare", s:white, s:danger, s:none)
 
 call Highlight("CursorLineNR", s:yellow, s:none, s:none)
 
-call Highlight("CursorColumn", s:none, s:none, s:none)
+call Highlight("CursorColumn", s:none, s:darker_grey, s:none)
 call Highlight("ColorColumn", s:none, s:none, s:none)
 call Highlight("Conceal", s:none, s:none, s:none)
-call Highlight("CursorLine", s:none, s:none, s:none)
+call Highlight("CursorLine", s:none, s:darker_grey, s:none)
 call Highlight("Type", s:none, s:none, s:none)
 
 call Highlight("Visual", s:none, s:dark_grey, s:none)
