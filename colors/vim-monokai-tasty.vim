@@ -103,7 +103,7 @@ call Highlight("StatusLine", s:white, s:dark_grey, s:none)
 call Highlight("StatusLineNC", s:light_grey, s:darker_grey, s:none)
 
 call Highlight("Exception", s:magenta, s:none, s:bold)
-call Highlight("MatchParen", s:magenta, s:none, s:underline)
+call Highlight("MatchParen", s:magenta, s:none, s:bold)
 call Highlight("Include", s:magenta, s:none, s:none)
 call Highlight("Conditional", s:magenta, s:none, s:none)
 call Highlight("Define", s:magenta, s:none, s:none)
