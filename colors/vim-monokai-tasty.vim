@@ -18,7 +18,7 @@ endif
 if g:vim_monokai_tasty_italic
   let s:italic = { "cterm": "italic", "gui": "italic" }
 else
-  let s:italic = { "cterm": "none", "gui": "none" }
+  let s:italic = { "cterm": "NONE", "gui": "NONE" }
 endif
 
 let s:yellow = { "cterm": 228, "gui": "#E7DC6D" }
@@ -42,7 +42,7 @@ let s:dark_green = { "cterm": 22, "gui": "#005f00" }
 let s:light_sea_blue = { "cterm": 33, "gui": "#0087ff" }
 let s:sea_blue = { "cterm": 25, "gui": "#005faf" }
 
-let s:none = { "cterm": "none", "gui": "none" }
+let s:none = { "cterm": "NONE", "gui": "NONE" }
 let s:bold = { "cterm": "bold", "gui": "bold" }
 let s:underline = { "cterm": "underline", "gui": "underline" }
 let s:bold_underline = { "cterm": "bold,underline", "gui": "bold,underline" }
