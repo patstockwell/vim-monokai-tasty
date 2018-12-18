@@ -82,10 +82,10 @@ call Highlight("SpellRare", s:white, s:danger, s:none)
 
 call Highlight("CursorLineNR", s:yellow, s:none, s:none)
 
-call Highlight("CursorColumn", s:none, s:none, s:none)
+call Highlight("CursorColumn", s:none, s:darker_grey, s:none)
 call Highlight("ColorColumn", s:none, s:none, s:none)
 call Highlight("Conceal", s:none, s:none, s:none)
-call Highlight("CursorLine", s:none, s:none, s:none)
+call Highlight("CursorLine", s:none, s:darker_grey, s:none)
 call Highlight("Type", s:none, s:none, s:none)
 
 call Highlight("Visual", s:none, s:dark_grey, s:none)
@@ -103,7 +103,7 @@ call Highlight("StatusLine", s:white, s:dark_grey, s:none)
 call Highlight("StatusLineNC", s:light_grey, s:darker_grey, s:none)
 
 call Highlight("Exception", s:magenta, s:none, s:bold)
-call Highlight("MatchParen", s:magenta, s:none, s:underline)
+call Highlight("MatchParen", s:magenta, s:none, s:bold_underline)
 call Highlight("Include", s:magenta, s:none, s:none)
 call Highlight("Conditional", s:magenta, s:none, s:none)
 call Highlight("Define", s:magenta, s:none, s:none)
