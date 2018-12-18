@@ -89,12 +89,11 @@ let s:palette.inactive_modified = {
       \ }
 
 " CtrlP
-if !get(g:, 'loaded_ctrlp', 0)
-  finish
+if get(g:, 'loaded_ctrlp', 0)
+  let s:palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
+        \ s:add(s:yellow, s:dark_grey, 'none'),
+        \ s:add(s:yellow, s:darker_grey, 'none'),
+        \ s:add(s:charcoal, s:light_blue, 'bold') )
 endif
-let s:palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-      \ s:add(s:yellow, s:dark_grey, 'none'),
-      \ s:add(s:yellow, s:darker_grey, 'none'),
-      \ s:add(s:charcoal, s:light_blue, 'bold') )
 
 let g:airline#themes#monokai_tasty#palette = s:palette
