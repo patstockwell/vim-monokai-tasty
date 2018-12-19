@@ -299,6 +299,7 @@ call Highlight("xmlTag", s:light_blue, s:none, s:none)
 call Highlight("xmlTagName", s:light_blue, s:none, s:none)
 call Highlight("xmlEndTag", s:light_blue, s:none, s:none)
 call Highlight("xmlEqual", s:magenta, s:none, s:none)
+call Highlight("styledXmlRegionNoise", s:white, s:none, s:none)
 
 " JSON highlighting
 call Highlight("jsonKeyword", s:light_blue, s:none, s:none)
