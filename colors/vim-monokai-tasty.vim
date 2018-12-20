@@ -287,6 +287,14 @@ hi def link jsHtmlElemAttrs        Label
 hi def link jsHtmlElemFuncs        PreProc
 hi def link jsCssStyles            Label
 
+" JSX highlighting
+call Highlight("jsxTagName", s:purple, s:none, s:none)
+call Highlight("jsxComponentName", s:light_blue, s:none, s:none)
+call Highlight("jsxEqual", s:magenta, s:none, s:none)
+call Highlight("jsxPunct", s:grey, s:none, s:none)
+call Highlight("jsxCloseString", s:grey, s:none, s:none)
+call Highlight("jsxAttrib", s:white, s:none, s:italic)
+
 " vim
 call Highlight("vimParenSep", s:white, s:none, s:bold)
 call Highlight("vimOperParen", s:light_blue, s:none, s:italic)
