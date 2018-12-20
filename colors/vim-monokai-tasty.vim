@@ -158,7 +158,7 @@ call Highlight("jsParensCatch", s:white, s:none, s:none)
 call Highlight("jsArrowFunction", s:light_blue, s:none, s:none)
 call Highlight("jsArrowFuncArgs", s:orange, s:none, s:italic)
 
-call Highlight("jsBrackets", s:light_green, s:none, s:none)
+call Highlight("jsBrackets", s:white, s:none, s:none)
 call Highlight("jsBraces", s:white, s:none, s:none)
 call Highlight("jsFuncBraces", s:white, s:none, s:none)
 call Highlight("jsClassBraces", s:white, s:none, s:none)
@@ -187,6 +187,11 @@ call Highlight("jsFuncParens", s:white, s:none, s:none)
 call Highlight("jsGlobalObjects", s:light_blue, s:none, s:none)
 call Highlight("jsFunction", s:light_blue, s:none, s:italic)
 call Highlight("jsClassMethodType", s:light_blue, s:none, s:italic)
+call Highlight("jsObjectKey", s:white, s:none, s:none)
+call Highlight("jsBlockLabel", s:white, s:none, s:none)
+call Highlight("jsObjectColon", s:magenta, s:none, s:none)
+call Highlight("jsObjectSeparator", s:purple, s:none, s:none)
+call Highlight("jsNoise", s:white, s:none, s:none)
 
 hi def link jsComment              Comment
 hi def link jsEnvComment           Comment
@@ -241,13 +246,10 @@ hi def link jsNull                 Type
 hi def link jsFloat                Float
 hi def link jsBooleanTrue          Boolean
 hi def link jsBooleanFalse         Boolean
-hi def link jsObjectColon          jsNoise
-hi def link jsNoise                Noise
 hi def link jsDot                  Noise
 hi def link jsClassNoise           Noise
 hi def link jsGenerator            jsFunction
 
-hi def link jsObjectSeparator      Noise
 hi def link jsSpecial              Special
 hi def link jsGlobalNodeObjects    Constant
 hi def link jsExceptions           Constant
