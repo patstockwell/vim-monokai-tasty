@@ -315,6 +315,11 @@ call Highlight("styledXmlRegionNoise", s:white, s:none, s:none)
 call Highlight("jsonKeyword", s:light_blue, s:none, s:none)
 call Highlight("jsonString", s:yellow, s:none, s:none)
 
+" Clojure highlighting
+call Highlight("clojureParen", s:white, s:none, s:none)
+call Highlight("clojureDefine", s:light_blue, s:none, s:italic)
+call Highlight("clojureMacro", s:light_blue, s:none, s:none)
+
 " NERDTree highlighting
 call Highlight("NERDTreeClosable", s:yellow, s:none, s:none)
 call Highlight("NERDTreeOpenable", s:yellow, s:none, s:none)
