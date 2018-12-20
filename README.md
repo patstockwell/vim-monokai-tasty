@@ -18,7 +18,7 @@ Plug 'patstockwell/vim-monokai-tasty'
 Works best with these if you write javascript or React
 ```vim
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
 Plug 'elzr/vim-json'
 ```
