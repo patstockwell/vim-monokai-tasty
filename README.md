@@ -48,6 +48,11 @@ To use the included [vim-airline](https://github.com/vim-airline/vim-airline) th
 let g:airline_theme='monokai_tasty'
 ```
 
+## :crystal_ball: Extras
+
+- If you use [iterm2](https://iterm2.com/) (you should), there is an included _monokai.itermcolors_ file.
+- If you use GnuCoreutils there is a _dircolors_ file (compliments the iterm colours)
+
 ## :tv: Screen shots
 
 ![](./images/example1.png)
