@@ -21,8 +21,8 @@ else
   let s:italic = { "cterm": "NONE", "gui": "NONE" }
 endif
 
-let s:yellow = { "cterm": 228, "gui": "#E7DC6D" }
-let s:purple = { "cterm": 141, "gui": "#AC7CFF" }
+let s:yellow = { "cterm": 228, "gui": "#ffff87" }
+let s:purple = { "cterm": 141, "gui": "#af87ff" }
 let s:light_green = { "cterm": 148, "gui": "#A4E400" }
 let s:light_blue = { "cterm": 81, "gui": "#62D8F1" }
 let s:magenta = { "cterm": 197, "gui": "#FC1A70" }
