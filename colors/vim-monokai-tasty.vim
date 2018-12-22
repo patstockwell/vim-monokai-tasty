@@ -182,6 +182,7 @@ call Highlight("jsClassKeyword", s:light_blue, s:none, s:italic)
 
 call Highlight("jsThis", s:orange, s:none, s:italic)
 call Highlight("jsUndefined", s:purple, s:none, s:none)
+call Highlight("jsNull", s:purple, s:none, s:none)
 call Highlight("jsParens", s:white, s:none, s:none)
 call Highlight("jsFuncParens", s:white, s:none, s:none)
 call Highlight("jsGlobalObjects", s:light_blue, s:none, s:none)
@@ -242,7 +243,6 @@ hi def link jsOf                   Operator
 hi def link jsExtendsKeyword       Keyword
 hi def link jsSuper                Constant
 hi def link jsNan                  Number
-hi def link jsNull                 Type
 hi def link jsFloat                Float
 hi def link jsBooleanTrue          Boolean
 hi def link jsBooleanFalse         Boolean
