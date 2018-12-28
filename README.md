@@ -25,7 +25,7 @@ Plug 'elzr/vim-json'
 
 ## :wolf: Use
 
-Add the following to your `.vimrc`:
+Add the following to your `.vimrc` (after the Plug declaration):
 ```vim
 colorscheme vim-monokai-tasty
 ```
