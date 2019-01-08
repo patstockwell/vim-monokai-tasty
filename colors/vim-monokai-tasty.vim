@@ -193,6 +193,7 @@ call Highlight("jsBlockLabel", s:white, s:none, s:none)
 call Highlight("jsObjectColon", s:magenta, s:none, s:none)
 call Highlight("jsObjectSeparator", s:purple, s:none, s:none)
 call Highlight("jsNoise", s:white, s:none, s:none)
+call Highlight("jsGlobalNodeObjects", s:magenta, s:none, s:none)
 
 hi def link jsComment              Comment
 hi def link jsEnvComment           Comment
@@ -251,7 +252,6 @@ hi def link jsClassNoise           Noise
 hi def link jsGenerator            jsFunction
 
 hi def link jsSpecial              Special
-hi def link jsGlobalNodeObjects    Constant
 hi def link jsExceptions           Constant
 hi def link jsBuiltins             Constant
 hi def link jsExportDefault        StorageClass
