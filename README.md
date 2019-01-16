@@ -15,12 +15,19 @@ Add the following to your `.vimrc` and run `PlugInstall`
 Plug 'patstockwell/vim-monokai-tasty'
 ```
 
-Works best with these if you write javascript or React
+For JavaScript or React development, _monokai-tasty_ supports definitions from all these plugins.
+Add some of these for an even better look and feel:
 ```vim
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
 Plug 'elzr/vim-json'
+Plug 'jparise/vim-graphql'
+```
+
+If you use _Vundle_:
+```vim
+Plugin 'patstockwell/vim-monokai-tasty'
 ```
 
 ## :wolf: Use

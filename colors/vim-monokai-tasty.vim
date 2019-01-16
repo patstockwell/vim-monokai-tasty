@@ -195,6 +195,8 @@ call Highlight("jsObjectSeparator", s:purple, s:none, s:none)
 call Highlight("jsNoise", s:white, s:none, s:none)
 call Highlight("jsGlobalNodeObjects", s:magenta, s:none, s:none)
 
+call Highlight("EcmaScriptTemplateStrings", s:yellow, s:none, s:italic)
+
 hi def link jsComment              Comment
 hi def link jsEnvComment           Comment
 hi def link jsCommentTodo          Todo
@@ -296,6 +298,12 @@ call Highlight("jsxEqual", s:magenta, s:none, s:none)
 call Highlight("jsxPunct", s:grey, s:none, s:none)
 call Highlight("jsxCloseString", s:grey, s:none, s:none)
 call Highlight("jsxAttrib", s:white, s:none, s:italic)
+
+" GraphQL
+call Highlight("graphqlStructure", s:magenta, s:none, s:none)
+call Highlight("graphqlBraces", s:white, s:none, s:none)
+call Highlight("graphqlConstant", s:white, s:none, s:none)
+call Highlight("graphqlType", s:purple, s:none, s:none)
 
 " vim
 call Highlight("vimParenSep", s:white, s:none, s:bold)
