@@ -28,12 +28,15 @@ let s:light_blue = { "cterm": 81, "gui": "#62D8F1" }
 let s:magenta = { "cterm": 197, "gui": "#FC1A70" }
 let s:orange = { "cterm": 208, "gui": "#FF9700" }
 
+" in order light -> dark
 let s:white = { "cterm": 231, "gui": "#ffffff" }
 let s:light_grey = { "cterm": 250, "gui": "#bcbcbc" }
 let s:grey = { "cterm": 245, "gui": "#8a8a8a" }
 let s:dark_grey = { "cterm": 59, "gui": "#5f5f5f" }
 let s:darker_grey = { "cterm": 238, "gui": "#444444" }
+let s:light_charcoal = { "cterm": 238, "gui": "#292929" }
 let s:charcoal = { "cterm": 235, "gui": "#262626" }
+
 let s:danger = { "cterm": 197, "gui": "#ff005f" }
 let s:olive = { "cterm": 64, "gui": "#5f8700" }
 let s:dark_red = { "cterm": 88, "gui": "#870000" }
@@ -79,7 +82,7 @@ call Highlight("SpellLocal", s:charcoal, s:orange, s:italic)
 call Highlight("CursorLineNR", s:yellow, s:none, s:none)
 
 call Highlight("CursorColumn", s:none, s:darker_grey, s:none)
-call Highlight("ColorColumn", s:none, s:none, s:none)
+call Highlight("ColorColumn", s:none, s:light_charcoal, s:none)
 call Highlight("Conceal", s:none, s:none, s:none)
 call Highlight("CursorLine", s:none, s:darker_grey, s:none)
 call Highlight("Type", s:none, s:none, s:none)
