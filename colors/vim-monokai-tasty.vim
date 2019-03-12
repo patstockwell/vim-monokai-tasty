@@ -339,6 +339,9 @@ call Highlight("NERDTreeClosable", s:yellow, s:none, s:none)
 call Highlight("NERDTreeOpenable", s:yellow, s:none, s:none)
 call Highlight("NERDTreeDirSlash", s:light_blue, s:none, s:none)
 
+" Ruby
+call Highlight("rubyStringDelimiter", s:yellow, s:none, s:none)
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
