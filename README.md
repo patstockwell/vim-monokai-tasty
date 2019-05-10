@@ -1,3 +1,7 @@
+## This fork looks nice in terminal :)
+
+---
+
 # vim-monokai-tasty
 
 Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.

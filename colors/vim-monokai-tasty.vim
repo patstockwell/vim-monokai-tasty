@@ -60,7 +60,7 @@ function! Highlight(group, fg, bg, style)
         \ . " gui=" . a:style["gui"]
 endfunction
 
-call Highlight("Normal", s:white, s:charcoal, s:none)
+call Highlight("Normal", s:white, s:none, s:none)
 
 call Highlight("Cursor", s:charcoal, s:light_blue, s:none)
 call Highlight("Special", s:purple, s:none, s:none)
@@ -115,7 +115,7 @@ call Highlight("PreProc", s:magenta, s:none, s:none)
 call Highlight("Statement", s:magenta, s:none, s:none)
 call Highlight("Repeat", s:magenta, s:none, s:none)
 
-call Highlight("SpecialKey", s:dark_grey, s:darker_grey, s:none)
+call Highlight("SpecialKey", s:dark_grey, s:none, s:none)
 call Highlight("IncSearch", s:white, s:purple, s:bold_underline)
 call Highlight("Search", s:white, s:purple, s:bold_underline)
 
