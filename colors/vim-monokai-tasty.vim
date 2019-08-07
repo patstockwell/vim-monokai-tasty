@@ -173,7 +173,7 @@ call Highlight("jsObjectBraces", s:white, s:none, s:none)
 call Highlight("jsFinallyBraces", s:white, s:none, s:none)
 call Highlight("jsRepeatBraces", s:white, s:none, s:none)
 call Highlight("jsSwitchBraces", s:white, s:none, s:none)
-call Highlight("jsTemplateBraces", s:white, s:none, s:none)
+call Highlight("jsTemplateBraces", s:purple, s:none, s:none)
 
 call Highlight("jsDestructuringBraces", s:white, s:none, s:none)
 call Highlight("jsFuncName", s:light_green, s:none, s:none)
