@@ -133,6 +133,7 @@ call Highlight("Boolean", s:purple, s:none, s:none)
 call Highlight("Character", s:purple, s:none, s:none)
 call Highlight("Float", s:purple, s:none, s:none)
 call Highlight("Number", s:purple, s:none, s:none)
+call Highlight("jsFutureKeys", s:purple, s:none, s:none)
 
 call Highlight("Folded", s:grey, s:charcoal, s:none)
 call Highlight("Comment", s:grey, s:none, s:italic)
