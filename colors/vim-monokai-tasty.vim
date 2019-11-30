@@ -1,8 +1,6 @@
 " Vim color file
 "
-" Author: Patrick Stockwell <longnow@tutanota.com>
-"
-" hi clear "Reset all highlighting to the defaults.  Removes all highlighting for groups added by the user
+" Author: Patrick Stockwell <mail@deciphr.net>
 
 if exists("syntax_on")
   syntax reset
