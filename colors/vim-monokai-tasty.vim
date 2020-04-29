@@ -313,6 +313,7 @@ call Highlight("jsxAttrib", s:white, s:none, s:italic)
 " Typescript
 call Highlight("typescriptNull", s:purple, s:none, s:none)
 call Highlight("typescriptBraces", s:purple, s:none, s:none)
+call Highlight("typescriptFuncKeyword", s:light_blue, s:none, s:italic)
 
 " GraphQL
 call Highlight("graphqlStructure", s:magenta, s:none, s:none)
