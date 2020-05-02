@@ -355,6 +355,14 @@ call Highlight("NERDTreeFile", s:none, s:none, s:none)
 " Ruby
 call Highlight("rubyStringDelimiter", s:yellow, s:none, s:none)
 
+" Calendar
+call Highlight("CalNavi", s:light_blue, s:none, s:bold_underline)
+call Highlight("CalToday", s:magenta, s:none, s:bold)
+call Highlight("CalSaturday", s:purple, s:none, s:none)
+call Highlight("CalSunday", s:purple, s:none, s:none)
+call Highlight("CalHeader", s:light_green, s:none, s:none)
+call Highlight("CalRuler", s:grey, s:darker_grey, s:bold)
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
