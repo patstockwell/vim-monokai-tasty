@@ -32,7 +32,7 @@ let s:light_grey = { "cterm": 250, "gui": "#bcbcbc" }
 let s:grey = { "cterm": 245, "gui": "#8a8a8a" }
 let s:dark_grey = { "cterm": 59, "gui": "#5f5f5f" }
 let s:darker_grey = { "cterm": 238, "gui": "#444444" }
-let s:light_charcoal = { "cterm": 238, "gui": "#292929" }
+let s:light_charcoal = { "cterm": 238, "gui": "#2b2b2b" }
 let s:charcoal = { "cterm": 235, "gui": "#262626" }
 
 let s:danger = { "cterm": 197, "gui": "#ff005f" }
@@ -362,6 +362,20 @@ call Highlight("CalSaturday", s:purple, s:none, s:none)
 call Highlight("CalSunday", s:purple, s:none, s:none)
 call Highlight("CalHeader", s:light_green, s:none, s:none)
 call Highlight("CalRuler", s:grey, s:darker_grey, s:bold)
+
+" Markdown
+call Highlight("markdownCode", s:light_grey, s:none, s:bold)
+call Highlight("markdownCodeDelimiter", s:yellow, s:none, s:none)
+
+" Vimwiki
+call Highlight("VimwikiDelText", s:grey, s:none, s:none)
+call Highlight("VimwikiHeaderChar", s:light_green, s:none, s:bold)
+call Highlight("VimwikiHeader1", s:light_green, s:none, s:bold)
+call Highlight("VimwikiHeader2", s:light_green, s:none, s:bold)
+call Highlight("VimwikiHeader3", s:light_green, s:none, s:bold)
+call Highlight("VimwikiHeader4", s:light_green, s:none, s:bold)
+call Highlight("VimwikiHeader5", s:light_green, s:none, s:bold)
+call Highlight("VimwikiHeader6", s:light_green, s:none, s:bold)
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
