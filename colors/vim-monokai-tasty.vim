@@ -2,6 +2,7 @@
 "
 " Author: Patrick Stockwell <mail@deciphr.net>
 
+hi clear
 if exists("syntax_on")
   syntax reset
 endif
