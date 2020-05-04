@@ -377,6 +377,12 @@ call Highlight("VimwikiHeader4", s:light_green, s:none, s:bold)
 call Highlight("VimwikiHeader5", s:light_green, s:none, s:bold)
 call Highlight("VimwikiHeader6", s:light_green, s:none, s:bold)
 
+" GitGutter
+call Highlight("GitGutterAdd", s:light_green, s:none, s:none)
+call Highlight("GitGutterChange", s:light_blue, s:none, s:none)
+call Highlight("GitGutterDelete", s:magenta, s:none, s:none)
+call Highlight("GitGutterChangeDelete", s:orange, s:none, s:none)
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
