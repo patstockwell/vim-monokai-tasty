@@ -2,6 +2,7 @@
 "
 " Author: Patrick Stockwell <mail@deciphr.net>
 
+hi clear
 if exists("syntax_on")
   syntax reset
 endif
@@ -86,7 +87,7 @@ call Highlight("Whitespace", s:dark_grey, s:none, s:none)
 
 call Highlight("TabLineSel", s:none, s:charcoal, s:bold)
 
-call Highlight("SignColumn", s:grey, s:darker_grey, s:none)
+call Highlight("SignColumn", s:none, s:none, s:none)
 call Highlight("NonText", s:darker_grey, s:none, s:none)
 call Highlight("TabLineFill", s:none, s:darker_grey, s:none)
 call Highlight("LineNr", s:darker_grey, s:none, s:none)
@@ -377,7 +378,12 @@ call Highlight("VimwikiHeader4", s:light_green, s:none, s:bold)
 call Highlight("VimwikiHeader5", s:light_green, s:none, s:bold)
 call Highlight("VimwikiHeader6", s:light_green, s:none, s:bold)
 
+" GitGutter
+call Highlight("GitGutterAdd", s:light_green, s:none, s:none)
+call Highlight("GitGutterChange", s:light_blue, s:none, s:none)
+call Highlight("GitGutterDelete", s:magenta, s:none, s:none)
+call Highlight("GitGutterChangeDelete", s:orange, s:none, s:none)
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
-
