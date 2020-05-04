@@ -87,7 +87,7 @@ call Highlight("Whitespace", s:dark_grey, s:none, s:none)
 
 call Highlight("TabLineSel", s:none, s:charcoal, s:bold)
 
-call Highlight("SignColumn", s:grey, s:darker_grey, s:none)
+call Highlight("SignColumn", s:none, s:none, s:none)
 call Highlight("NonText", s:darker_grey, s:none, s:none)
 call Highlight("TabLineFill", s:none, s:darker_grey, s:none)
 call Highlight("LineNr", s:darker_grey, s:none, s:none)
