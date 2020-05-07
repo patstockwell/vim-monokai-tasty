@@ -303,6 +303,9 @@ hi def link jsHtmlElemAttrs        Label
 hi def link jsHtmlElemFuncs        PreProc
 hi def link jsCssStyles            Label
 
+" HTML
+call Highlight("htmlTag", s:white, s:none, s:none)
+
 " JSX highlighting
 call Highlight("jsxTagName", s:purple, s:none, s:none)
 call Highlight("jsxComponentName", s:light_blue, s:none, s:none)
@@ -364,19 +367,29 @@ call Highlight("CalSunday", s:purple, s:none, s:none)
 call Highlight("CalHeader", s:light_green, s:none, s:none)
 call Highlight("CalRuler", s:grey, s:darker_grey, s:bold)
 
-" Markdown
+" Markdown https://github.com/tpope/vim-markdown/
 call Highlight("markdownCode", s:light_grey, s:none, s:bold)
 call Highlight("markdownCodeDelimiter", s:yellow, s:none, s:none)
 
+" Markdown https://github.com/plasticboy/vim-markdown
+call Highlight("mkdHeading", s:magenta, s:none, s:none)
+call Highlight("mkdURL", s:purple, s:none, s:none)
+call Highlight("mkdCode", s:orange, s:none, s:none)
+call Highlight("mkdCodeStart", s:light_green, s:none, s:none)
+call Highlight("mkdCodeEnd", s:light_green, s:none, s:none)
+call Highlight("mkdDelimiter", s:light_blue, s:none, s:none)
+
 " Vimwiki
 call Highlight("VimwikiDelText", s:grey, s:none, s:none)
-call Highlight("VimwikiHeaderChar", s:light_green, s:none, s:bold)
-call Highlight("VimwikiHeader1", s:light_green, s:none, s:bold)
-call Highlight("VimwikiHeader2", s:light_green, s:none, s:bold)
-call Highlight("VimwikiHeader3", s:light_green, s:none, s:bold)
-call Highlight("VimwikiHeader4", s:light_green, s:none, s:bold)
-call Highlight("VimwikiHeader5", s:light_green, s:none, s:bold)
-call Highlight("VimwikiHeader6", s:light_green, s:none, s:bold)
+call Highlight("VimwikiHeaderChar", s:magenta, s:none, s:bold)
+call Highlight("VimwikiHeader1", s:white, s:none, s:bold)
+call Highlight("VimwikiHeader2", s:white, s:none, s:bold)
+call Highlight("VimwikiHeader3", s:white, s:none, s:bold)
+call Highlight("VimwikiHeader4", s:white, s:none, s:bold)
+call Highlight("VimwikiHeader5", s:white, s:none, s:bold)
+call Highlight("VimwikiHeader6", s:white, s:none, s:bold)
+call Highlight("VimwikiPre", s:light_green, s:none, s:bold)
+call Highlight("VimwikiCode", s:purple, s:none, s:none)
 
 " GitGutter
 call Highlight("GitGutterAdd", s:light_green, s:none, s:none)
