@@ -124,8 +124,8 @@ call Highlight("gitcommitSummary", s:white, s:none, s:none)
 call Highlight("gitcommitOverflow", s:magenta, s:none, s:none)
 
 call Highlight("SpecialKey", s:dark_grey, s:darker_grey, s:none)
-call Highlight("IncSearch", s:white, s:purple, s:bold_underline)
-call Highlight("Search", s:white, s:purple, s:bold_underline)
+call Highlight("IncSearch", s:white, s:magenta, s:bold_underline)
+call Highlight("Search", s:white, s:magenta, s:bold_underline)
 
 call Highlight("Identifier", s:light_blue, s:none, s:none)
 call Highlight("Question", s:light_blue, s:none, s:none)
@@ -156,6 +156,8 @@ call Highlight("Pmenu", s:light_blue, s:darker_grey, s:none)
 call Highlight("PmenuSel", s:yellow, s:dark_grey, s:none)
 call Highlight("PmenuSbar", s:none, s:grey, s:none)
 call Highlight("PmenuThumb", s:none, s:white, s:none)
+
+call Highlight("MoreMsg", s:light_green, s:none, s:none)
 
 " Javascript syntax overwrites from vim-javascript plugin
 syntax region  jsObject             contained matchgroup=jsObjectBraces        start=/{/  end=/}/  contains=jsObjectKey,jsObjectKeyString,jsObjectKeyComputed,jsObjectShorthandProp,jsObjectSeparator,jsObjectFuncName,jsObjectMethodType,jsGenerator,jsComment,jsObjectStringKey,jsSpreadExpression,jsTemplateString,jsDecorator,jsAsyncKeyword extend fold
