@@ -1,5 +1,7 @@
 # vim-monokai-tasty
 
+[![Donate with Bitcoin](https://en.cryptobadges.io/badge/small/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)](https://en.cryptobadges.io/donate/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)
+
 Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
 It works for all languages, and is particularly good for Javascript development :heart:
 
@@ -113,3 +115,9 @@ command! What echo synIDattr(synID(line('.'), col('.'), 1), 'name')
 | Magenta          | `#FC1A70`  |![#FC1A70](https://placehold.it/100x40/FC1A70/000000?text=+)
 | Orange           | `#FF9700`  |![#FF9700](https://placehold.it/100x40/FF9700/000000?text=+)
 
+## :building_construction: Support
+If you like `vim-monokai-tasty` or find this plugin useful, you can support me by donating bitcoin to the following address.
+
+[![Donate with Bitcoin](https://en.cryptobadges.io/badge/small/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)](https://en.cryptobadges.io/donate/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)
+
+![](qr-code.png)
