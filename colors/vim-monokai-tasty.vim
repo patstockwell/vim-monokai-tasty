@@ -27,7 +27,12 @@ let s:light_blue = { "cterm": 81, "gui": "#62D8F1" }
 let s:magenta = { "cterm": 197, "gui": "#FC1A70" }
 let s:orange = { "cterm": 208, "gui": "#FF9700" }
 
-" in order light -> dark
+" Search colours. Specifically not in the monokai palette so that they will
+" stand out.
+let s:black = { "cterm": 0, "gui": "#000000" }
+let s:bright_yellow = { "cterm": 11, "gui": "yellow" }
+
+" Monochrome in order light -> dark
 let s:white = { "cterm": 231, "gui": "#ffffff" }
 let s:light_grey = { "cterm": 250, "gui": "#bcbcbc" }
 let s:grey = { "cterm": 245, "gui": "#8a8a8a" }
@@ -36,6 +41,7 @@ let s:darker_grey = { "cterm": 238, "gui": "#444444" }
 let s:light_charcoal = { "cterm": 238, "gui": "#2b2b2b" }
 let s:charcoal = { "cterm": 235, "gui": "#262626" }
 
+" Git diff colours.
 let s:danger = { "cterm": 197, "gui": "#ff005f" }
 let s:olive = { "cterm": 64, "gui": "#5f8700" }
 let s:dark_red = { "cterm": 88, "gui": "#870000" }
@@ -81,6 +87,12 @@ call Highlight("Conceal", s:none, s:none, s:none)
 call Highlight("CursorLine", s:none, s:darker_grey, s:none)
 call Highlight("Type", s:none, s:none, s:none)
 
+" quickfix window
+call Highlight("qfFileName", s:purple, s:none, s:none)
+call Highlight("qfLineNr", s:light_blue, s:none, s:none)
+call Highlight("qfSeparator", s:light_grey, s:none, s:none)
+call Highlight("QuickFixLine", s:light_green, s:light_charcoal, s:bold)
+
 call Highlight("Visual", s:none, s:dark_grey, s:none)
 call Highlight("TabLine", s:light_grey, s:dark_grey, s:underline)
 call Highlight("Whitespace", s:dark_grey, s:none, s:none)
@@ -90,7 +102,7 @@ call Highlight("TabLineSel", s:none, s:charcoal, s:bold)
 call Highlight("SignColumn", s:none, s:none, s:none)
 call Highlight("NonText", s:darker_grey, s:none, s:none)
 call Highlight("TabLineFill", s:none, s:darker_grey, s:none)
-call Highlight("LineNr", s:darker_grey, s:none, s:none)
+call Highlight("LineNr", s:dark_grey, s:none, s:none)
 call Highlight("VertSplit", s:darker_grey, s:charcoal, s:none)
 call Highlight("StatusLine", s:white, s:dark_grey, s:none)
 call Highlight("StatusLineNC", s:light_grey, s:darker_grey, s:none)
@@ -124,8 +136,8 @@ call Highlight("gitcommitSummary", s:white, s:none, s:none)
 call Highlight("gitcommitOverflow", s:magenta, s:none, s:none)
 
 call Highlight("SpecialKey", s:dark_grey, s:darker_grey, s:none)
-call Highlight("IncSearch", s:white, s:magenta, s:bold_underline)
-call Highlight("Search", s:white, s:magenta, s:bold_underline)
+call Highlight("IncSearch", s:black, s:bright_yellow, s:bold)
+call Highlight("Search", s:black, s:bright_yellow, s:bold)
 
 call Highlight("Identifier", s:light_blue, s:none, s:none)
 call Highlight("Question", s:light_blue, s:none, s:none)
@@ -143,7 +155,8 @@ call Highlight("Float", s:purple, s:none, s:none)
 call Highlight("Number", s:purple, s:none, s:none)
 call Highlight("jsFutureKeys", s:purple, s:none, s:none)
 
-call Highlight("Folded", s:grey, s:charcoal, s:none)
+call Highlight("Folded", s:grey, s:none, s:none)
+call Highlight("FoldColumn", s:light_grey, s:none, s:none)
 call Highlight("Comment", s:grey, s:none, s:italic)
 
 call Highlight("Label", s:yellow, s:none, s:none)
@@ -155,7 +168,7 @@ call Highlight("Underlined", s:none, s:none, s:underline)
 call Highlight("Pmenu", s:light_blue, s:darker_grey, s:none)
 call Highlight("PmenuSel", s:yellow, s:dark_grey, s:none)
 call Highlight("PmenuSbar", s:none, s:grey, s:none)
-call Highlight("PmenuThumb", s:none, s:white, s:none)
+call Highlight("PmenuThumb", s:dark_grey, s:white, s:none)
 
 call Highlight("MoreMsg", s:light_green, s:none, s:none)
 
