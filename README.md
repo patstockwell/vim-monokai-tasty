@@ -1,5 +1,8 @@
 # vim-monokai-tasty
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-blueviolet.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+![Last commit](https://img.shields.io/github/last-commit/patstockwell/vim-monokai-tasty?color=blue)
 [![Donate with Bitcoin](https://en.cryptobadges.io/badge/small/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)](https://en.cryptobadges.io/donate/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)
 
 Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
