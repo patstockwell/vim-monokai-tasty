@@ -47,8 +47,8 @@ let s:olive = { "cterm": 64, "gui": "#5f8700" }
 let s:dark_red = { "cterm": 88, "gui": "#870000" }
 let s:blood_red = { "cterm": 52, "gui": "#5f0000" }
 let s:dark_green = { "cterm": 22, "gui": "#005f00" }
-let s:light_sea_blue = { "cterm": 33, "gui": "#0087ff" }
-let s:sea_blue = { "cterm": 25, "gui": "#005faf" }
+let s:bright_blue = { "cterm": 33, "gui": "#0087ff" }
+let s:purple_slate = { "cterm": 60, "gui": "#5f5f87" }
 
 let s:none = { "cterm": "NONE", "gui": "NONE" }
 let s:bold = { "cterm": "bold", "gui": "bold" }
@@ -121,8 +121,8 @@ call Highlight("PreProc", s:magenta, s:none, s:none)
 call Highlight("Statement", s:magenta, s:none, s:none)
 call Highlight("Repeat", s:magenta, s:none, s:none)
 
-call Highlight("diffChange", s:white, s:sea_blue, s:none)
-call Highlight("diffText", s:white, s:light_sea_blue, s:none)
+call Highlight("diffChange", s:white, s:purple_slate, s:none)
+call Highlight("diffText", s:white, s:bright_blue, s:bold)
 call Highlight("diffDelete", s:dark_red, s:blood_red, s:none)
 call Highlight("diffAdd", s:white, s:dark_green, s:none)
 call Highlight("diffAdded", s:light_green, s:none, s:none)
