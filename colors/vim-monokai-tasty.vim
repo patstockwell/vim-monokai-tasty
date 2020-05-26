@@ -407,6 +407,8 @@ call Highlight("VimwikiHeader6", s:white, s:none, s:bold)
 call Highlight("VimwikiPre", s:light_green, s:none, s:bold)
 call Highlight("VimwikiCode", s:purple, s:none, s:none)
 call Highlight("VimwikiCodeChar", s:purple, s:none, s:none)
+call Highlight("VimwikiBoldChar", s:none, s:none, s:none)
+call Highlight("VimwikiItalicChar", s:none, s:none, s:none)
 
 " GitGutter
 call Highlight("GitGutterAdd", s:light_green, s:none, s:none)
