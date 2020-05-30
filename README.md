@@ -24,16 +24,6 @@ Add the following to your `.vimrc` and run `PlugInstall`
 Plug 'patstockwell/vim-monokai-tasty'
 ```
 
-For JavaScript or React development, _monokai-tasty_ supports definitions from all these plugins.
-Add some of these for an even better look and feel:
-```vim
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'styled-components/vim-styled-components'
-Plug 'elzr/vim-json'
-Plug 'jparise/vim-graphql'
-```
-
 If you use _Vundle_:
 ```vim
 Plugin 'patstockwell/vim-monokai-tasty'
@@ -62,6 +52,17 @@ let g:lightline = {
 To use the included [vim-airline](https://github.com/vim-airline/vim-airline) theme:
 ```vim
 let g:airline_theme='monokai_tasty'
+```
+
+## :books: Additional plugins with targeted syntax groups
+For JavaScript or React development, _monokai-tasty_ supports definitions from all these plugins.
+Add some of these for an even better look and feel:
+```vim
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'styled-components/vim-styled-components'
+Plug 'elzr/vim-json'
+Plug 'jparise/vim-graphql'
 ```
 
 ## :crystal_ball: Extras
