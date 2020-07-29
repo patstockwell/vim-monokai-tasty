@@ -418,8 +418,11 @@ call Highlight("GitGutterChangeDelete", s:orange, s:none, s:none)
 
 " Python
 call Highlight("pythonBuiltin", s:light_blue, s:none, s:none)
+call Highlight("pythonBuiltinFunc", s:light_blue, s:none, s:none)
+call Highlight("pythonFunctionCall", s:light_blue, s:none, s:none)
 hi link pythonTripleQuotes Comment
 hi link pythonDoctest Comment
+hi link pythonDoctest2 Comment
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
