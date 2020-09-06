@@ -332,8 +332,22 @@ call Highlight("jsxAttrib", s:white, s:none, s:italic)
 
 " Typescript
 call Highlight("typescriptNull", s:purple, s:none, s:none)
-call Highlight("typescriptBraces", s:purple, s:none, s:none)
+call Highlight("typescriptType", s:white, s:none, s:italic)
+call Highlight("typescriptEndColons", s:white, s:none, s:none)
+call Highlight("typescriptLabel", s:magenta, s:none, s:none)
+call Highlight("typescriptLogicSymbols", s:magenta, s:none, s:none)
+call Highlight("typescriptParens", s:white, s:none, s:none)
+call Highlight("typescriptBraces", s:white, s:none, s:none)
+call Highlight("typescriptDotNotation", s:magenta, s:none, s:none)
+call Highlight("typescriptInterpolationDelimiter", s:purple, s:none, s:none)
+call Highlight("typescriptExceptions", s:magenta, s:none, s:bold)
 call Highlight("typescriptFuncKeyword", s:light_blue, s:none, s:italic)
+
+" New typescript definition names
+call Highlight("typescriptGlobalNodeObjects", s:magenta, s:none, s:none)
+call Highlight("typescriptGlobalObjects", s:light_blue, s:none, s:none)
+call Highlight("typescriptArrowFunction", s:light_blue, s:none, s:none)
+call Highlight("typescriptFuncCall", s:light_blue, s:none, s:none)
 
 " GraphQL
 call Highlight("graphqlStructure", s:magenta, s:none, s:none)
