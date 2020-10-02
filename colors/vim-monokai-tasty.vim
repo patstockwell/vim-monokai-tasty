@@ -332,7 +332,7 @@ call Highlight("jsxAttrib", s:white, s:none, s:italic)
 
 " Typescript
 call Highlight("typescriptNull", s:purple, s:none, s:none)
-call Highlight("typescriptType", s:white, s:none, s:italic)
+call Highlight("typescriptType", s:light_blue, s:none, s:italic)
 call Highlight("typescriptEndColons", s:white, s:none, s:none)
 call Highlight("typescriptLabel", s:magenta, s:none, s:none)
 call Highlight("typescriptLogicSymbols", s:magenta, s:none, s:none)
