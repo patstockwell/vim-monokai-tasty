@@ -58,7 +58,7 @@ let g:airline_theme='monokai_tasty'
 For JavaScript, TypeScript, and React development, _monokai-tasty_ supports definitions from all these plugins.
 Add some of these for an even better look and feel:
 ```vim
-Plug 'typescriptRegExpMethod'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
