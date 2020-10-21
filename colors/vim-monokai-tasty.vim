@@ -11,7 +11,11 @@ let g:colors_name = "vim-monokai-tasty"
 
 " User Options
 if !exists("g:vim_monokai_tasty_italic")
+  if has('gui_running') || $TERM_ITALICS == 'true'
+    let g:vim_monokai_tasty_italic = 1
+  else
     let g:vim_monokai_tasty_italic = 0
+  endif
 endif
 
 if g:vim_monokai_tasty_italic
