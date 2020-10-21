@@ -9,7 +9,7 @@ endif
 
 let g:colors_name = "vim-monokai-tasty"
 
-" User Options
+" User Options --- {{{
 if !exists("g:vim_monokai_tasty_italic")
   if has('gui_running') || $TERM_ITALICS == 'true'
     let g:vim_monokai_tasty_italic = 1
@@ -17,6 +17,7 @@ if !exists("g:vim_monokai_tasty_italic")
     let g:vim_monokai_tasty_italic = 0
   endif
 endif
+" }}}
 
 if g:vim_monokai_tasty_italic
   let s:italic = { "cterm": "italic", "gui": "italic" }
@@ -148,9 +149,11 @@ call Highlight("Identifier", s:light_blue, s:none, s:none)
 call Highlight("Question", s:light_blue, s:none, s:none)
 call Highlight("StorageClass", s:light_blue, s:none, s:italic)
 call Highlight("Structure", s:light_blue, s:none, s:none)
+call Highlight("Typedef", s:light_blue, s:none, s:none)
 
 call Highlight("Function", s:light_green, s:none, s:none)
 
+call Highlight("PreCondit", s:purple, s:none, s:none)
 call Highlight("Constant", s:purple, s:none, s:none)
 call Highlight("Directory", s:purple, s:none, s:none)
 call Highlight("Tag", s:purple, s:none, s:none)
