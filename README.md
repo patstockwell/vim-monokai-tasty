@@ -83,6 +83,7 @@ Plug 'jparise/vim-graphql'
 " put Plug declaration first
 call plug#begin('~/.vim/plugged')
 Plug 'patstockwell/vim-monokai-tasty'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'elzr/vim-json'
