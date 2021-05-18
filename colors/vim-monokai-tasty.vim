@@ -380,6 +380,7 @@ call Highlight("typescriptUnaryOp", s:magenta, s:none, s:none)
 call Highlight("typescriptAssign", s:magenta, s:none, s:none)
 call Highlight("typescriptOptionalMark", s:purple, s:none, s:italic)
 call Highlight("typescriptTemplateSB", s:purple, s:none, s:none)
+call Highlight("typescriptTestGlobal", s:light_blue, s:none, s:none)
 call Highlight("typescriptPaymentShippingOptionProp", s:none, s:none, s:none)
 " 'leafgarland/typescript-vim'
 call Highlight("typescriptNull", s:purple, s:none, s:none)
