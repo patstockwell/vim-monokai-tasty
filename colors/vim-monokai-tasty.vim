@@ -490,6 +490,16 @@ hi link pythonTripleQuotes Comment
 hi link pythonDoctest Comment
 hi link pythonDoctest2 Comment
 
+" Nvim LSP
+call Highlight("LspDiagnosticsDefaultError", { "cterm": 197, "gui": "#fd2c40" }, s:none, s:none)
+call Highlight("LspDiagnosticsDefaultWarning", s:yellow, s:none, s:none)
+call Highlight("LspDiagnosticsDefaultInformation", s:white, s:none, s:none)
+call Highlight("LspDiagnosticsDefaultHint", s:light_grey, s:none, s:none)
+call Highlight("LspDiagnosticsUnderlineError", s:none, s:none, s:underline)
+call Highlight("LspDiagnosticsUnderlineWarning", s:none, s:none, s:underline)
+call Highlight("LspDiagnosticsUnderlineInformation", s:none, s:none, s:underline)
+call Highlight("LspDiagnosticsUnderlineHint", s:none, s:none, s:underline)
+
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
