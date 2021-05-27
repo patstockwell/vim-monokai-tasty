@@ -432,6 +432,9 @@ call Highlight("clojureMacro", s:light_blue, s:none, s:none)
 " R language
 call Highlight("rFunction", s:light_blue, s:none, s:none)
 
+" C/C++
+call Highlight("cType", s:orange, s:none, s:italic)
+
 " NERDTree highlighting
 call Highlight("NERDTreeClosable", s:yellow, s:none, s:none)
 call Highlight("NERDTreeOpenable", s:yellow, s:none, s:none)
