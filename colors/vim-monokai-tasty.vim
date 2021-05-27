@@ -433,7 +433,7 @@ call Highlight("clojureMacro", s:light_blue, s:none, s:none)
 call Highlight("rFunction", s:light_blue, s:none, s:none)
 
 " C/C++
-call Highlight("cType", s:orange, s:none, s:italic)
+call Highlight("cType", s:light_blue, s:none, s:italic)
 
 " NERDTree highlighting
 call Highlight("NERDTreeClosable", s:yellow, s:none, s:none)
