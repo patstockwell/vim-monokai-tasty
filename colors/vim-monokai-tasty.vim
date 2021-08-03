@@ -488,7 +488,11 @@ call Highlight("GitGutterChangeDelete", s:orange, s:none, s:none)
 " Python
 call Highlight("pythonBuiltin", s:light_blue, s:none, s:none)
 call Highlight("pythonBuiltinFunc", s:light_blue, s:none, s:none)
+call Highlight("pythonFunction", s:light_green, s:none, s:none)
+call Highlight("pythonClass", s:light_green, s:none, s:none)
 call Highlight("pythonFunctionCall", s:light_blue, s:none, s:none)
+call Highlight("pythonClassVar", s:orange, s:none, s:italic)
+call Highlight("pythonExClass", s:light_blue, s:none, s:italic)
 hi link pythonTripleQuotes Comment
 hi link pythonDoctest Comment
 hi link pythonDoctest2 Comment
