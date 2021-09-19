@@ -401,6 +401,21 @@ call Highlight("typescriptGlobalObjects", s:light_blue, s:none, s:none)
 call Highlight("typescriptArrowFunction", s:light_blue, s:none, s:none)
 call Highlight("typescriptFuncCall", s:light_blue, s:none, s:none)
 
+" TypeScript Treesitter
+call Highlight("typescriptTSBoolean", s:orange, s:none, s:none)
+call Highlight("typescriptTSVariable", s:white, s:none, s:none)
+call Highlight("typescriptTSConstructor", s:white, s:none, s:none)
+call Highlight("typescriptTSPunctDelimiter", s:white, s:none, s:none)
+call Highlight("typescriptTSPunctBracket", s:white, s:none, s:none)
+call Highlight("typescriptTSConstant", s:white, s:none, s:none)
+call Highlight("typescriptTSTypeBuiltin", s:light_blue, s:none, s:italic)
+call Highlight("typescriptTSType", s:light_green, s:none, s:none)
+call Highlight("typescriptTSKeyword", s:light_blue, s:none, s:italic)
+call Highlight("typescriptTSProperty", s:white, s:none, s:none)
+call Highlight("typescriptTSParameter", s:orange, s:none, s:italic)
+
+
+
 " GraphQL
 call Highlight("graphqlStructure", s:magenta, s:none, s:none)
 call Highlight("graphqlBraces", s:white, s:none, s:none)
