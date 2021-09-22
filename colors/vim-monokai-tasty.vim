@@ -328,6 +328,9 @@ hi def link jsCssStyles            Label
 
 " HTML
 call Highlight("htmlTag", s:white, s:none, s:none)
+call Highlight("htmlTagN", s:magenta, s:none, s:none)
+call Highlight("htmlEndTag", s:white, s:none, s:none)
+call Highlight("htmlArg", s:light_green, s:none, s:none)
 
 " JSX highlighting
 call Highlight("jsxTagName", s:purple, s:none, s:none)
