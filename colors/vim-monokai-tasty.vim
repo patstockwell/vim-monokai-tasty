@@ -113,7 +113,7 @@ call Highlight('NonText', { 'fg': s:darker_grey, 'bg': s:none, 'style': s:none }
 call Highlight('TabLineFill', { 'fg': s:none, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('LineNr', { 'fg': s:dark_grey, 'bg': s:none, 'style': s:none })
 call Highlight('VertSplit', { 'fg': s:darker_grey, 'bg': s:charcoal, 'style': s:none })
-call Highlight('StatusLine', { 'fg': s:light_grey, 'bg': s:darker_grey, 'style': s:none })
+call Highlight('StatusLine', { 'fg': s:light_grey, 'bg': s:charcoal, 'style': s:none })
 call Highlight('StatusLineNC', { 'fg': s:grey, 'bg': s:darker_grey, 'style': s:none })
 
 call Highlight('StatusLineBase', { 'fg': s:white, 'bg': s:darker_grey, 'style': s:none })
