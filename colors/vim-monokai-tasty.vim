@@ -499,11 +499,12 @@ call Highlight('markdownCodeDelimiter', { 'fg': s:yellow, 'bg': s:none, 'style':
 
 " Markdown https://github.com/plasticboy/vim-markdown
 call Highlight('mkdHeading', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
-call Highlight('mkdURL', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-call Highlight('mkdCode', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+call Highlight('mkdURL', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+call Highlight('mkdCode', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('mkdCodeStart', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('mkdCodeEnd', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('mkdDelimiter', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+call Highlight('mkdCodeDelimiter', { 'fg': s:purple })
 
 " Vimwiki
 call Highlight('VimwikiDelText', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
