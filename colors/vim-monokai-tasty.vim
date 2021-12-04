@@ -540,14 +540,22 @@ hi link pythonDoctest Comment
 hi link pythonDoctest2 Comment
 
 " Nvim LSP
-call Highlight('LspDiagnosticsDefaultError', { 'fg': { 'cterm': 197, 'gui': '#fd2c40' }})
-call Highlight('LspDiagnosticsDefaultWarning', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
-call Highlight('LspDiagnosticsDefaultInformation', { 'fg': s:white, 'bg': s:none, 'style': s:none })
-call Highlight('LspDiagnosticsDefaultHint', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
-call Highlight('LspDiagnosticsUnderlineError', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
-call Highlight('LspDiagnosticsUnderlineWarning', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
-call Highlight('LspDiagnosticsUnderlineInformation', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
-call Highlight('LspDiagnosticsUnderlineHint', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
+call Highlight('DiagnosticError', { 'fg': { 'cterm': 197, 'gui': '#fd2c40' }})
+hi link LspDiagnosticsDefaultError DiagnosticError
+call Highlight('DiagnosticWarn', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
+hi link LspDiagnosticsDefaultWarning DiagnosticWarn
+call Highlight('DiagnosticInfo', { 'fg': s:white, 'bg': s:none, 'style': s:none })
+hi link LspDiagnosticsDefaultInfo DiagnosticInfo
+call Highlight('DiagnosticHint', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
+hi link LspDiagnosticsDefaultHint DiagnosticHint
+call Highlight('DiagnosticUnderlineError', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
+hi link LspDiagnosticsUnderlineError DiagnosticUnderlineError
+call Highlight('DiagnosticUnderlineWarn', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
+hi link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
+call Highlight('DiagnosticUnderlineInfo', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
+hi link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
+call Highlight('DiagnosticUnderlineHint', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
+hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
