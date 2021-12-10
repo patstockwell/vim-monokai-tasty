@@ -518,7 +518,7 @@ call Highlight('VimwikiHeader6', { 'fg': s:white, 'bg': s:none, 'style': s:bold 
 call Highlight('VimwikiPre', { 'fg': s:light_green, 'bg': s:none, 'style': s:bold })
 call Highlight('VimwikiCode', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('VimwikiCodeChar', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-call Highlight('VimwikiBoldChar', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+call Highlight('VimwikiBoldChar', { 'fg': s:grey })
 call Highlight('VimwikiItalicChar', { 'fg': s:grey })
 
 " GitGutter
