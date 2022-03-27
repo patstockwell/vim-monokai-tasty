@@ -440,7 +440,17 @@ call Highlight('typescriptTSKeyword', { 'fg': s:light_blue, 'bg': s:none, 'style
 call Highlight('typescriptTSProperty', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptTSParameter', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
 
-
+" Scala
+call Highlight('scalaExternal', { 'fg': s:light_blue, 'style': s:italic })
+call Highlight('scalaKeyword', { 'fg': s:light_blue, 'style': s:italic })
+call Highlight('scalaTypeDeclaration', { 'fg': s:light_blue, 'style': s:italic })
+call Highlight('scalaCapitalWord', { 'fg': s:light_blue })
+call Highlight('scalaInstanceDeclaration', { 'fg': s:light_green })
+call Highlight('scalaSpecial', { 'fg': s:magenta })
+call Highlight('scalaBoolean', { 'fg': s:purple })
+call Highlight('scalaRepeat', { 'fg': s:magenta })
+call Highlight('scalaConditional', { 'fg': s:magenta })
+call Highlight('scalaExceptionn', { 'fg': s:magenta, 'style': s:bold })
 
 " GraphQL
 call Highlight('graphqlStructure', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
@@ -503,7 +513,8 @@ call Highlight('mkdURL', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
 call Highlight('mkdCode', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('mkdCodeStart', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('mkdCodeEnd', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
-call Highlight('mkdDelimiter', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+call Highlight('mkdDelimiter', { 'fg': s:light_blue })
+call Highlight('mkdListItemCheckbox', { 'fg': s:light_blue })
 call Highlight('mkdCodeDelimiter', { 'fg': s:purple })
 
 " Vimwiki
