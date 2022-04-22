@@ -550,6 +550,11 @@ hi link pythonTripleQuotes Comment
 hi link pythonDoctest Comment
 hi link pythonDoctest2 Comment
 
+" netrw
+call Highlight('netrwExe', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
+call Highlight('netrwDir', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+call Highlight('netrwClassify', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
+
 " Nvim LSP
 call Highlight('DiagnosticError', { 'fg': { 'cterm': 197, 'gui': '#fd2c40' }})
 hi link LspDiagnosticsDefaultError DiagnosticError
