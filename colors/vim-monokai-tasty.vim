@@ -448,9 +448,12 @@ call Highlight('scalaCapitalWord', { 'fg': s:light_blue })
 call Highlight('scalaInstanceDeclaration', { 'fg': s:light_green })
 call Highlight('scalaSpecial', { 'fg': s:magenta })
 call Highlight('scalaBoolean', { 'fg': s:purple })
-call Highlight('scalaRepeat', { 'fg': s:magenta })
+call Highlight('scalaRepeat', { 'fg': s:orange })
 call Highlight('scalaConditional', { 'fg': s:magenta })
 call Highlight('scalaExceptionn', { 'fg': s:magenta, 'style': s:bold })
+call Highlight('scalaPackage', { 'fg': s:light_blue, 'style': s:italic })
+call Highlight('scalaPackageDeclaration', { 'fg': s:light_green })
+call Highlight('scalaAssignment', { 'fg': s:magenta })
 
 " GraphQL
 call Highlight('graphqlStructure', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
