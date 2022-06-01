@@ -369,6 +369,8 @@ call Highlight('typescriptCastKeyword', { 'fg': s:magenta, 'bg': s:none, 'style'
 call Highlight('typescriptImport', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptExport', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptCall', { 'fg': s:white, 'bg': s:none, 'style': s:italic })
+call Highlight('typescriptClassName', { 'fg': s:light_green })
+call Highlight('typescriptClassHeritage', { 'fg': s:light_green })
 call Highlight('typescriptArrowFuncArg', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
 call Highlight('typescriptAliasDeclaration', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptAliasKeyword', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
