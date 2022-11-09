@@ -88,12 +88,12 @@ call Highlight('SpellRare', { 'fg': s:white, 'bg': s:danger, 'style': s:none })
 call Highlight('SpellCap', { 'fg': s:charcoal, 'bg': s:orange, 'style': s:italic })
 call Highlight('SpellLocal', { 'fg': s:charcoal, 'bg': s:orange, 'style': s:italic })
 
-call Highlight('CursorLineNR', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
+call Highlight('CursorLineNR', { 'fg': s:yellow })
 
 call Highlight('CursorColumn', { 'fg': s:none, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('ColorColumn', { 'fg': s:none, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('Conceal', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-call Highlight('CursorLine', { 'fg': s:none, 'bg': s:darker_grey, 'style': s:none })
+call Highlight('CursorLine', { 'bg': s:light_charcoal })
 call Highlight('Type', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 
 " quickfix window
