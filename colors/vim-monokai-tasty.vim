@@ -25,26 +25,41 @@ else
   let s:italic = { 'cterm': 'NONE', 'gui': 'NONE' }
 endif
 
-let s:yellow = { 'cterm': 228, 'gui': '#ffff87' }
 let s:purple = { 'cterm': 141, 'gui': '#af87ff' }
 let s:light_green = { 'cterm': 148, 'gui': '#A4E400' }
 let s:light_blue = { 'cterm': 81, 'gui': '#62D8F1' }
 let s:magenta = { 'cterm': 197, 'gui': '#FC1A70' }
 let s:orange = { 'cterm': 208, 'gui': '#FF9700' }
+" A296C7 - purple (muted)
+" A8E393 - light green (muted)
+" 6DB6CF - light blue (muted)
+" C16777 - magenta (muted)
+" B68657 - orange (muted)
 
-" Search colours. Specifically not in the monokai palette so that they will
-" stand out.
-let s:black = { 'cterm': 0, 'gui': '#000000' }
-let s:bright_yellow = { 'cterm': 11, 'gui': 'yellow' }
+if g:vim_monokai_tasty_machine_tint == 1
+  " Monokai 'machine'
+  " Monochrome in order light -> dark
+  let s:light_grey = { 'cterm': 250, 'gui': '#8C9497' }
+  let s:grey = { 'cterm': 245, 'gui': '#576266' }
+  let s:dark_grey = { 'cterm': 59, 'gui': '#354044' }
+  let s:darker_grey = { 'cterm': 238, 'gui': '#242F35' }
+  let s:light_charcoal = { 'cterm': 238, 'gui': '#1A2225' }
+  let s:charcoal = { 'cterm': 235, 'gui': '#171C20' }
+  let s:yellow = { 'cterm': 228, 'gui': '#F6F557' }
+else
+  " Monokai classic
+  " Monochrome in order light -> dark
+  let s:light_grey = { 'cterm': 250, 'gui': '#bcbcbc' }
+  let s:grey = { 'cterm': 245, 'gui': '#8a8a8a' }
+  let s:dark_grey = { 'cterm': 59, 'gui': '#5f5f5f' }
+  let s:darker_grey = { 'cterm': 238, 'gui': '#444444' }
+  let s:light_charcoal = { 'cterm': 238, 'gui': '#2b2b2b' }
+  let s:charcoal = { 'cterm': 235, 'gui': '#262626' }
+  let s:yellow = { 'cterm': 228, 'gui': '#ffff87' }
+endif
 
-" Monochrome in order light -> dark
 let s:white = { 'cterm': 231, 'gui': '#ffffff' }
-let s:light_grey = { 'cterm': 250, 'gui': '#bcbcbc' }
-let s:grey = { 'cterm': 245, 'gui': '#8a8a8a' }
-let s:dark_grey = { 'cterm': 59, 'gui': '#5f5f5f' }
-let s:darker_grey = { 'cterm': 238, 'gui': '#444444' }
-let s:light_charcoal = { 'cterm': 238, 'gui': '#2b2b2b' }
-let s:charcoal = { 'cterm': 235, 'gui': '#262626' }
+let s:black = { 'cterm': 0, 'gui': '#000000' }
 
 " Git diff colours.
 let s:danger = { 'cterm': 197, 'gui': '#ff005f' }
@@ -138,6 +153,10 @@ call Highlight('StatusLineVisualModeBold', { 'fg': s:charcoal, 'bg': s:purple, '
 call Highlight('StatusLineInsertModeBold', { 'fg': s:charcoal, 'bg': s:yellow, 'style': s:bold })
 call Highlight('StatusLineCommandModeBold', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:bold })
 
+" Custom highlight groups
+call Highlight('ActiveWindow', { 'bg': s:charcoal })
+call Highlight('InactiveWindow', { 'bg': s:light_charcoal })
+
 call Highlight('Exception', { 'fg': s:magenta, 'bg': s:none, 'style': s:bold })
 call Highlight('MatchParen', { 'fg': s:magenta, 'bg': s:none, 'style': s:bold_underline })
 call Highlight('Include', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
@@ -168,8 +187,8 @@ call Highlight('gitcommitSummary', { 'fg': s:white, 'bg': s:none, 'style': s:non
 call Highlight('gitcommitOverflow', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 
 call Highlight('SpecialKey', { 'fg': s:dark_grey, 'bg': s:none, 'style': s:none })
-call Highlight('IncSearch', { 'fg': s:bright_yellow, 'bg': s:black, 'style': s:bold_underline })
-call Highlight('Search', { 'fg': s:black, 'bg': s:bright_yellow, 'style': s:bold })
+call Highlight('IncSearch', { 'fg': s:yellow, 'bg': s:black, 'style': s:bold_underline })
+call Highlight('Search', { 'fg': s:black, 'bg': s:yellow, 'style': s:bold })
 
 call Highlight('Identifier', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('Question', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
