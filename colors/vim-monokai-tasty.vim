@@ -97,9 +97,13 @@ call Highlight('NormalNC', { 'fg': s:off_white, 'bg': s:light_charcoal, 'style':
 call Highlight('Cursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('lCursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('CursorIM', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
+call Highlight('TermCursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
+call Highlight('TermCursorNC', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('Special', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Title', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
 
+call Highlight('EndOfBuffer', { 'fg': s:darker_grey, 'bg': s:none, 'style': s:none })
+call Highlight('WinSeparator', { 'fg': s:darker_grey, 'bg': s:none, 'style': s:none })
 call Highlight('Error', { 'fg': s:white, 'bg': s:danger, 'style': s:none })
 call Highlight('ErrorMsg', { 'fg': s:white, 'bg': s:danger, 'style': s:none })
 call Highlight('WarningMsg', { 'fg': s:white, 'bg': s:danger, 'style': s:none })
@@ -110,7 +114,7 @@ call Highlight('SpellLocal', { 'fg': s:charcoal, 'bg': s:orange, 'style': s:ital
 
 call Highlight('CursorLineNR', { 'fg': s:yellow })
 
-call Highlight('CursorColumn', { 'fg': s:none, 'bg': s:darker_grey, 'style': s:none })
+call Highlight('CursorColumn', { 'fg': s:none, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('ColorColumn', { 'fg': s:none, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('Conceal', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('CursorLine', { 'bg': s:light_charcoal })
