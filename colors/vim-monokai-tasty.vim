@@ -188,7 +188,8 @@ call Highlight('gitcommitOverflow', { 'fg': s:magenta, 'bg': s:none, 'style': s:
 
 call Highlight('SpecialKey', { 'fg': s:dark_grey, 'bg': s:none, 'style': s:none })
 call Highlight('IncSearch', { 'fg': s:yellow, 'bg': s:black, 'style': s:bold_underline })
-call Highlight('Search', { 'fg': s:black, 'bg': s:yellow, 'style': s:bold })
+call Highlight('Search', { 'fg': s:light_charcoal, 'bg': s:yellow, 'style': s:none })
+call Highlight('CurSearch', { 'fg': s:black, 'bg': s:yellow, 'style': s:bold })
 
 call Highlight('Identifier', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('Question', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
