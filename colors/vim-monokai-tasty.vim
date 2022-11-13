@@ -58,6 +58,7 @@ else
   let s:yellow = { 'cterm': 228, 'gui': '#FFFF87' }
 endif
 
+let s:off_white = { 'cterm': 231, 'gui': '#CCCCCC' }
 let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
 let s:black = { 'cterm': 0, 'gui': '#000000' }
 
@@ -91,6 +92,7 @@ function! Highlight(group, colour)
 endfunction
 
 call Highlight('Normal', { 'fg': s:white, 'bg': s:charcoal, 'style': s:none })
+call Highlight('NormalNC', { 'fg': s:off_white, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('Cursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('lCursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('CursorIM', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
