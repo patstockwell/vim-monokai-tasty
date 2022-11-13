@@ -120,6 +120,7 @@ call Highlight('CursorColumn', { 'fg': s:none, 'bg': s:light_charcoal, 'style': 
 call Highlight('ColorColumn', { 'fg': s:none, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('Conceal', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('CursorLine', { 'bg': s:light_charcoal, 'style': s:none })
+call Highlight('LineNrBe', { 'fg': s:light_green, 'style': s:none })
 call Highlight('Type', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('Visual', { 'fg': s:none, 'bg': s:dark_grey, 'style': s:none })
 call Highlight('TabLine', { 'fg': s:light_grey, 'bg': s:dark_grey, 'style': s:underline })
@@ -178,7 +179,7 @@ call Highlight('Character', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Float', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Number', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Folded', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
-call Highlight('FoldColumn', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
+call Highlight('FoldColumn', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
 call Highlight('Comment', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
 call Highlight('Label', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('String', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
@@ -189,6 +190,8 @@ call Highlight('PmenuSel', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:none 
 call Highlight('PmenuSbar', { 'fg': s:none, 'bg': s:grey, 'style': s:none })
 call Highlight('PmenuThumb', { 'fg': s:dark_grey, 'bg': s:white, 'style': s:none })
 call Highlight('MoreMsg', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+call Highlight('Substitute', { 'fg': s:black, 'bg': s:light_green, 'style': s:none })
+call Highlight('ModeMsg', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
 " }}}
 
 " Custom Status line {{{
