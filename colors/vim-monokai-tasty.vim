@@ -26,6 +26,7 @@ else
 endif
 " }}}
 
+" Colours {{{
 let s:purple = { 'cterm': 141, 'gui': '#AF87FF' }
 let s:light_green = { 'cterm': 148, 'gui': '#A4E400' }
 let s:light_blue = { 'cterm': 81, 'gui': '#62D8F1' }
@@ -76,7 +77,9 @@ let s:none = { 'cterm': 'NONE', 'gui': 'NONE' }
 let s:bold = { 'cterm': 'bold', 'gui': 'bold' }
 let s:underline = { 'cterm': 'underline', 'gui': 'underline' }
 let s:bold_underline = { 'cterm': 'bold,underline', 'gui': 'bold,underline' }
+" }}}
 
+" Highlight helper {{{
 function! Highlight(group, colour)
   let l:foreground = exists('a:colour.fg')
         \ ? ' ctermfg=' . a:colour.fg.cterm . ' guifg=' . a:colour.fg.gui
@@ -91,6 +94,7 @@ function! Highlight(group, colour)
         \ . a:group . l:foreground . l:background . l:style
   exec l:highlight_command
 endfunction
+" }}}
 
 call Highlight('Normal', { 'fg': s:white, 'bg': s:charcoal, 'style': s:none })
 call Highlight('NormalNC', { 'fg': s:off_white, 'bg': s:light_charcoal, 'style': s:none })
