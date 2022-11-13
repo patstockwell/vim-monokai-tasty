@@ -182,8 +182,6 @@ call Highlight('Boolean', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Character', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Float', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Number', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-call Highlight('jsFutureKeys', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-
 call Highlight('Folded', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
 call Highlight('FoldColumn', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
 call Highlight('Comment', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
@@ -275,6 +273,7 @@ call Highlight('jsObjectColon', { 'fg': s:magenta, 'bg': s:none, 'style': s:none
 call Highlight('jsObjectSeparator', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('jsNoise', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsGlobalNodeObjects', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
+call Highlight('jsFutureKeys', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 
 call Highlight('EcmaScriptTemplateStrings', { 'fg': s:yellow, 'bg': s:none, 'style': s:italic })
 
