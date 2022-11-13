@@ -101,7 +101,6 @@ call Highlight('TermCursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:
 call Highlight('TermCursorNC', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('Special', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Title', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
-
 call Highlight('EndOfBuffer', { 'fg': s:darker_grey, 'bg': s:none, 'style': s:none })
 call Highlight('WinSeparator', { 'fg': s:darker_grey, 'bg': s:none, 'style': s:none })
 call Highlight('Error', { 'fg': s:white, 'bg': s:danger, 'style': s:none })
@@ -160,20 +159,16 @@ call Highlight('gitcommitHeader', { 'fg': s:light_blue, 'bg': s:none, 'style': s
 call Highlight('gitcommitSelectedFile', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
 call Highlight('gitcommitSummary', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('gitcommitOverflow', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
-
 call Highlight('SpecialKey', { 'fg': s:dark_grey, 'bg': s:none, 'style': s:none })
 call Highlight('IncSearch', { 'fg': s:yellow, 'bg': s:black, 'style': s:bold_underline })
 call Highlight('Search', { 'fg': s:dark_grey, 'bg': s:yellow, 'style': s:none })
 call Highlight('CurSearch', { 'fg': s:black, 'bg': s:yellow, 'style': s:bold })
-
 call Highlight('Identifier', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('Question', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('StorageClass', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 call Highlight('Structure', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('Typedef', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
-
 call Highlight('Function', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
-
 call Highlight('PreCondit', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Constant', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Directory', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
@@ -185,18 +180,14 @@ call Highlight('Number', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('Folded', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
 call Highlight('FoldColumn', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
 call Highlight('Comment', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
-
 call Highlight('Label', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('String', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
-
 call Highlight('Todo', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:bold })
 call Highlight('Underlined', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
-
 call Highlight('Pmenu', { 'fg': s:light_blue, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('PmenuSel', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:none })
 call Highlight('PmenuSbar', { 'fg': s:none, 'bg': s:grey, 'style': s:none })
 call Highlight('PmenuThumb', { 'fg': s:dark_grey, 'bg': s:white, 'style': s:none })
-
 call Highlight('MoreMsg', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 
 call Highlight('StatusLineBase', { 'fg': s:white, 'bg': s:darker_grey, 'style': s:none })
@@ -233,16 +224,13 @@ call Highlight('jsParensIfElse', { 'fg': s:white, 'bg': s:none, 'style': s:none 
 call Highlight('jsParensRepeat', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsParensSwitch', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsParensCatch', { 'fg': s:white, 'bg': s:none, 'style': s:none })
-
 call Highlight('jsArrowFunction', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('jsArrowFuncArgs', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
-
 call Highlight('jsBrackets', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsFuncBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsClassBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsIfElseBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
-
 call Highlight('jsTryCatchBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsModuleBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsObjectBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
@@ -250,7 +238,6 @@ call Highlight('jsFinallyBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none
 call Highlight('jsRepeatBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsSwitchBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsTemplateBraces', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-
 call Highlight('jsDestructuringBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsFuncName', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('jsFuncCall', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
@@ -258,7 +245,6 @@ call Highlight('jsClassFuncName', { 'fg': s:light_green, 'bg': s:none, 'style': 
 call Highlight('jsArguments', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
 call Highlight('jsFuncArgs', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
 call Highlight('jsClassKeyword', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
-
 call Highlight('jsThis', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
 call Highlight('jsUndefined', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('jsNull', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
