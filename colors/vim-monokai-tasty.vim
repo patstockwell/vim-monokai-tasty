@@ -25,7 +25,7 @@ else
   let s:italic = { 'cterm': 'NONE', 'gui': 'NONE' }
 endif
 
-let s:purple = { 'cterm': 141, 'gui': '#af87ff' }
+let s:purple = { 'cterm': 141, 'gui': '#AF87FF' }
 let s:light_green = { 'cterm': 148, 'gui': '#A4E400' }
 let s:light_blue = { 'cterm': 81, 'gui': '#62D8F1' }
 let s:magenta = { 'cterm': 197, 'gui': '#FC1A70' }
@@ -49,26 +49,26 @@ if g:vim_monokai_tasty_machine_tint == 1
 else
   " Monokai classic
   " Monochrome in order light -> dark
-  let s:light_grey = { 'cterm': 250, 'gui': '#bcbcbc' }
-  let s:grey = { 'cterm': 245, 'gui': '#8a8a8a' }
-  let s:dark_grey = { 'cterm': 59, 'gui': '#5f5f5f' }
+  let s:light_grey = { 'cterm': 250, 'gui': '#BCBCBC' }
+  let s:grey = { 'cterm': 245, 'gui': '#8A8A8A' }
+  let s:dark_grey = { 'cterm': 59, 'gui': '#5F5F5F' }
   let s:darker_grey = { 'cterm': 238, 'gui': '#444444' }
-  let s:light_charcoal = { 'cterm': 238, 'gui': '#2b2b2b' }
+  let s:light_charcoal = { 'cterm': 238, 'gui': '#2B2B2B' }
   let s:charcoal = { 'cterm': 235, 'gui': '#262626' }
-  let s:yellow = { 'cterm': 228, 'gui': '#ffff87' }
+  let s:yellow = { 'cterm': 228, 'gui': '#FFFF87' }
 endif
 
-let s:white = { 'cterm': 231, 'gui': '#ffffff' }
+let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
 let s:black = { 'cterm': 0, 'gui': '#000000' }
 
 " Git diff colours.
-let s:danger = { 'cterm': 197, 'gui': '#ff005f' }
-let s:olive = { 'cterm': 64, 'gui': '#5f8700' }
+let s:danger = { 'cterm': 197, 'gui': '#FF005F' }
+let s:olive = { 'cterm': 64, 'gui': '#5F8700' }
 let s:dark_red = { 'cterm': 88, 'gui': '#870000' }
-let s:blood_red = { 'cterm': 52, 'gui': '#5f0000' }
-let s:dark_green = { 'cterm': 22, 'gui': '#005f00' }
-let s:bright_blue = { 'cterm': 33, 'gui': '#0087ff' }
-let s:purple_slate = { 'cterm': 60, 'gui': '#5f5f87' }
+let s:blood_red = { 'cterm': 52, 'gui': '#5F0000' }
+let s:dark_green = { 'cterm': 22, 'gui': '#005F00' }
+let s:bright_blue = { 'cterm': 33, 'gui': '#0087FF' }
+let s:purple_slate = { 'cterm': 60, 'gui': '#5F5F87' }
 
 let s:none = { 'cterm': 'NONE', 'gui': 'NONE' }
 let s:bold = { 'cterm': 'bold', 'gui': 'bold' }
