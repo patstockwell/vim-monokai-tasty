@@ -59,7 +59,7 @@ else
   let s:yellow = { 'cterm': 228, 'gui': '#FFFF87' }
 endif
 
-let s:off_white = { 'cterm': 231, 'gui': '#CCCCCC' }
+let s:off_white = { 'cterm': 251, 'gui': '#CCCCCC' }
 let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
 let s:black = { 'cterm': 0, 'gui': '#000000' }
 
