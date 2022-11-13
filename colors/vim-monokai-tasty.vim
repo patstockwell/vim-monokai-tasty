@@ -9,7 +9,8 @@ endif
 
 let g:colors_name = 'vim-monokai-tasty'
 
-" User Options --- {{{
+" Set Italics {{{
+" If user has not set italics, set based on terminal support
 if !exists('g:vim_monokai_tasty_italic')
   if has('gui_running') || $TERM_ITALICS == 'true'
     let g:vim_monokai_tasty_italic = 1
@@ -17,13 +18,13 @@ if !exists('g:vim_monokai_tasty_italic')
     let g:vim_monokai_tasty_italic = 0
   endif
 endif
-" }}}
 
 if g:vim_monokai_tasty_italic
   let s:italic = { 'cterm': 'italic', 'gui': 'italic' }
 else
   let s:italic = { 'cterm': 'NONE', 'gui': 'NONE' }
 endif
+" }}}
 
 let s:purple = { 'cterm': 141, 'gui': '#AF87FF' }
 let s:light_green = { 'cterm': 148, 'gui': '#A4E400' }
