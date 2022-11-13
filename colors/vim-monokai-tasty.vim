@@ -113,12 +113,6 @@ call Highlight('Conceal', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('CursorLine', { 'bg': s:light_charcoal })
 call Highlight('Type', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 
-" quickfix window
-call Highlight('qfFileName', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-call Highlight('qfLineNr', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
-call Highlight('qfSeparator', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
-call Highlight('QuickFixLine', { 'fg': s:light_green, 'bg': s:light_charcoal, 'style': s:bold })
-
 call Highlight('Visual', { 'fg': s:none, 'bg': s:dark_grey, 'style': s:none })
 call Highlight('TabLine', { 'fg': s:light_grey, 'bg': s:dark_grey, 'style': s:underline })
 call Highlight('Whitespace', { 'fg': s:dark_grey, 'bg': s:none, 'style': s:none })
@@ -227,6 +221,12 @@ call Highlight('PmenuSbar', { 'fg': s:none, 'bg': s:grey, 'style': s:none })
 call Highlight('PmenuThumb', { 'fg': s:dark_grey, 'bg': s:white, 'style': s:none })
 
 call Highlight('MoreMsg', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+
+" quickfix window
+call Highlight('qfFileName', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
+call Highlight('qfLineNr', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+call Highlight('qfSeparator', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
+call Highlight('QuickFixLine', { 'fg': s:light_green, 'bg': s:light_charcoal, 'style': s:bold })
 
 " Javascript colour highlighting rules
 call Highlight('Noise', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
