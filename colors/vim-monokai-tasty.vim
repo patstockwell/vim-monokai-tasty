@@ -79,7 +79,7 @@ let s:underline = { 'cterm': 'underline', 'gui': 'underline' }
 let s:bold_underline = { 'cterm': 'bold,underline', 'gui': 'bold,underline' }
 " }}}
 
-" Highlight helper {{{
+" Highlight function helper {{{
 function! Highlight(group, colour)
   let l:foreground = exists('a:colour.fg')
         \ ? ' ctermfg=' . a:colour.fg.cterm . ' guifg=' . a:colour.fg.gui
@@ -96,6 +96,7 @@ function! Highlight(group, colour)
 endfunction
 " }}}
 
+" Base highlights {{{
 call Highlight('Normal', { 'fg': s:white, 'bg': s:charcoal, 'style': s:none })
 call Highlight('NormalNC', { 'fg': s:off_white, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('Cursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
@@ -114,21 +115,16 @@ call Highlight('SpellBad', { 'fg': s:white, 'bg': s:danger, 'style': s:none })
 call Highlight('SpellRare', { 'fg': s:white, 'bg': s:danger, 'style': s:none })
 call Highlight('SpellCap', { 'fg': s:charcoal, 'bg': s:orange, 'style': s:italic })
 call Highlight('SpellLocal', { 'fg': s:charcoal, 'bg': s:orange, 'style': s:italic })
-
 call Highlight('CursorLineNR', { 'fg': s:yellow })
-
 call Highlight('CursorColumn', { 'fg': s:none, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('ColorColumn', { 'fg': s:none, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('Conceal', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('CursorLine', { 'bg': s:light_charcoal })
 call Highlight('Type', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-
 call Highlight('Visual', { 'fg': s:none, 'bg': s:dark_grey, 'style': s:none })
 call Highlight('TabLine', { 'fg': s:light_grey, 'bg': s:dark_grey, 'style': s:underline })
 call Highlight('Whitespace', { 'fg': s:dark_grey, 'bg': s:none, 'style': s:none })
-
 call Highlight('TabLineSel', { 'fg': s:none, 'bg': s:charcoal, 'style': s:bold })
-
 call Highlight('SignColumn', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('NonText', { 'fg': s:darker_grey, 'bg': s:none, 'style': s:none })
 call Highlight('TabLineFill', { 'fg': s:none, 'bg': s:darker_grey, 'style': s:none })
@@ -193,7 +189,9 @@ call Highlight('PmenuSel', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:none 
 call Highlight('PmenuSbar', { 'fg': s:none, 'bg': s:grey, 'style': s:none })
 call Highlight('PmenuThumb', { 'fg': s:dark_grey, 'bg': s:white, 'style': s:none })
 call Highlight('MoreMsg', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+" }}}
 
+" Custom Status line {{{
 call Highlight('StatusLineBase', { 'fg': s:white, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('StatusLineGitBranch', { 'fg': s:white, 'bg': s:dark_grey, 'style': s:italic })
 call Highlight('StatusLineModifiedFile', { 'fg': s:orange, 'bg': s:darker_grey, 'style': s:none })
@@ -215,14 +213,16 @@ call Highlight('StatusLineNormalModeBold', { 'fg': s:charcoal, 'bg': s:light_gre
 call Highlight('StatusLineVisualModeBold', { 'fg': s:charcoal, 'bg': s:purple, 'style': s:bold })
 call Highlight('StatusLineInsertModeBold', { 'fg': s:charcoal, 'bg': s:yellow, 'style': s:bold })
 call Highlight('StatusLineCommandModeBold', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:bold })
+" }}}
 
-" quickfix window
+" Quickfix window {{{
 call Highlight('qfFileName', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('qfLineNr', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('qfSeparator', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
 call Highlight('QuickFixLine', { 'fg': s:light_green, 'bg': s:light_charcoal, 'style': s:bold })
+" }}}
 
-" Javascript colour highlighting rules
+" Javascript {{{
 call Highlight('Noise', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('jsParensIfElse', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsParensRepeat', { 'fg': s:white, 'bg': s:none, 'style': s:none })
@@ -264,7 +264,6 @@ call Highlight('jsObjectSeparator', { 'fg': s:purple, 'bg': s:none, 'style': s:n
 call Highlight('jsNoise', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('jsGlobalNodeObjects', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('jsFutureKeys', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-
 call Highlight('EcmaScriptTemplateStrings', { 'fg': s:yellow, 'bg': s:none, 'style': s:italic })
 
 hi def link jsComment              Comment
@@ -280,7 +279,6 @@ hi def link jsNumber               Number
 hi def link jsImport               Include
 hi def link jsExport               Include
 hi def link jsModuleComma          Operator
-
 hi def link jsTaggedTemplate       StorageClass
 hi def link jsTernaryIfOperator    Operator
 hi def link jsRegexpString         String
@@ -290,7 +288,6 @@ hi def link jsRegexpOr             Conditional
 hi def link jsRegexpMod            SpecialChar
 hi def link jsRegexpBackRef        SpecialChar
 hi def link jsRegexpGroup          String
-
 hi def link jsRegexpCharClass      Character
 hi def link jsCharacter            Character
 hi def link jsPrototype            Special
@@ -322,7 +319,6 @@ hi def link jsBooleanFalse         Boolean
 hi def link jsDot                  Noise
 hi def link jsClassNoise           Noise
 hi def link jsGenerator            jsFunction
-
 hi def link jsSpecial              Special
 hi def link jsExceptions           Constant
 hi def link jsBuiltins             Constant
@@ -360,23 +356,25 @@ hi def link jsHtmlEvents           Special
 hi def link jsHtmlElemAttrs        Label
 hi def link jsHtmlElemFuncs        PreProc
 hi def link jsCssStyles            Label
+" }}}
 
-" HTML
+" HTML {{{
 call Highlight('htmlTag', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('htmlTagN', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('htmlEndTag', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('htmlArg', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+" }}}
 
-" JSX highlighting
+" JSX {{{
 call Highlight('jsxTagName', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('jsxComponentName', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('jsxEqual', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('jsxPunct', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
 call Highlight('jsxCloseString', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
 call Highlight('jsxAttrib', { 'fg': s:white, 'bg': s:none, 'style': s:italic })
+" }}}
 
-" Typescript
-" 'HerringtonDarkholme/yats.vim'
+" Typescript {{{
 call Highlight('typescriptCastKeyword', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptImport', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptExport', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
@@ -422,7 +420,6 @@ call Highlight('typescriptOptionalMark', { 'fg': s:purple, 'bg': s:none, 'style'
 call Highlight('typescriptTemplateSB', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptTestGlobal', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptPaymentShippingOptionProp', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-" 'leafgarland/typescript-vim'
 call Highlight('typescriptNull', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptType', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 call Highlight('typescriptEndColons', { 'fg': s:white, 'bg': s:none, 'style': s:none })
@@ -434,8 +431,6 @@ call Highlight('typescriptDotNotation', { 'fg': s:magenta, 'bg': s:none, 'style'
 call Highlight('typescriptInterpolationDelimiter', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptExceptions', { 'fg': s:magenta, 'bg': s:none, 'style': s:bold })
 call Highlight('typescriptFuncKeyword', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
-
-" New typescript definition names
 call Highlight('typescriptGlobalNodeObjects', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptGlobalObjects', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptArrowFunction', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
@@ -453,8 +448,9 @@ call Highlight('typescriptTSType', { 'fg': s:light_green, 'bg': s:none, 'style':
 call Highlight('typescriptTSKeyword', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 call Highlight('typescriptTSProperty', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptTSParameter', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
+" }}}
 
-" Scala
+" Scala {{{
 call Highlight('scalaExternal', { 'fg': s:light_blue, 'style': s:italic })
 call Highlight('scalaKeyword', { 'fg': s:light_blue, 'style': s:italic })
 call Highlight('scalaTypeDeclaration', { 'fg': s:light_blue, 'style': s:italic })
@@ -468,59 +464,70 @@ call Highlight('scalaExceptionn', { 'fg': s:magenta, 'style': s:bold })
 call Highlight('scalaPackage', { 'fg': s:light_blue, 'style': s:italic })
 call Highlight('scalaPackageDeclaration', { 'fg': s:light_green })
 call Highlight('scalaAssignment', { 'fg': s:magenta })
+" }}}
 
-" GraphQL
+" GraphQL {{{
 call Highlight('graphqlStructure', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('graphqlBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('graphqlConstant', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('graphqlType', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
+" }}}
 
-" vim
+" Vim {{{
 call Highlight('vimParenSep', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
 call Highlight('vimOperParen', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 call Highlight('vimUserFunc', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('vimFunction', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+" }}}
 
-" XML highlighting.
+" XML {{{
 hi def link xmlTodo   Todo
 call Highlight('xmlTag', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('xmlTagName', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('xmlEndTag', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('xmlEqual', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
+" }}}
 
-" JSON highlighting
+" JSON {{{
 call Highlight('jsonKeyword', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('jsonString', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
+" }}}
 
-" Clojure highlighting
+" Clojure {{{
 call Highlight('clojureParen', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('clojureDefine', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 call Highlight('clojureMacro', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+" }}}
 
-" R language
+" R language {{{
 call Highlight('rFunction', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+" }}}
 
-" C/C++
+" C/C++ {{{
 call Highlight('cType', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+" }}}
 
-" NERDTree highlighting
+" NERDTree {{{
 call Highlight('NERDTreeClosable', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('NERDTreeOpenable', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('NERDTreeDirSlash', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('NERDTreeFile', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+" }}}
 
-" Ruby
+" Ruby {{{
 call Highlight('rubyStringDelimiter', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
+" }}}
 
-" Calendar
+" Calendar {{{
 call Highlight('CalNavi', { 'fg': s:light_blue, 'bg': s:none, 'style': s:bold_underline })
 call Highlight('CalToday', { 'fg': s:magenta, 'bg': s:none, 'style': s:bold })
 call Highlight('CalSaturday', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('CalSunday', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('CalHeader', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('CalRuler', { 'fg': s:grey, 'bg': s:darker_grey, 'style': s:bold })
+" }}}
 
-" Markdown https://github.com/tpope/vim-markdown/
+" Markdown {{{
 call Highlight('markdownCode', { 'fg': s:light_grey, 'bg': s:none, 'style': s:bold })
 call Highlight('markdownCodeDelimiter', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 
@@ -533,8 +540,9 @@ call Highlight('mkdCodeEnd', { 'fg': s:light_green, 'bg': s:none, 'style': s:non
 call Highlight('mkdDelimiter', { 'fg': s:light_blue })
 call Highlight('mkdListItemCheckbox', { 'fg': s:light_blue })
 call Highlight('mkdCodeDelimiter', { 'fg': s:purple })
+" }}}
 
-" Vimwiki
+" Vimwiki {{{
 call Highlight('VimwikiDelText', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
 call Highlight('VimwikiHeaderChar', { 'fg': s:magenta, 'bg': s:none, 'style': s:bold })
 call Highlight('VimwikiHeader1', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
@@ -548,14 +556,16 @@ call Highlight('VimwikiCode', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('VimwikiCodeChar', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('VimwikiBoldChar', { 'fg': s:grey })
 call Highlight('VimwikiItalicChar', { 'fg': s:grey })
+" }}}
 
-" GitGutter
+" GitGutter {{{
 call Highlight('GitGutterAdd', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('GitGutterChange', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('GitGutterDelete', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('GitGutterChangeDelete', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+" }}}
 
-" Python
+" Python {{{
 call Highlight('pythonBuiltin', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('pythonBuiltinFunc', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('pythonFunction', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
@@ -566,13 +576,15 @@ call Highlight('pythonExClass', { 'fg': s:light_blue, 'bg': s:none, 'style': s:i
 hi link pythonTripleQuotes Comment
 hi link pythonDoctest Comment
 hi link pythonDoctest2 Comment
+" }}}
 
-" netrw
+" netrw {{{
 call Highlight('netrwExe', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('netrwDir', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('netrwClassify', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
+" }}}
 
-" Nvim LSP
+" Nvim LSP {{{
 call Highlight('DiagnosticError', { 'fg': { 'cterm': 197, 'gui': '#fd2c40' }})
 hi link LspDiagnosticsDefaultError DiagnosticError
 call Highlight('DiagnosticWarn', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
@@ -589,6 +601,7 @@ call Highlight('DiagnosticUnderlineInfo', { 'fg': s:none, 'bg': s:none, 'style':
 hi link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
 call Highlight('DiagnosticUnderlineHint', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
 hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
+" }}}
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
