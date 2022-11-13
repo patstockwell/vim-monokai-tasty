@@ -133,11 +133,6 @@ call Highlight('LineNr', { 'fg': s:dark_grey, 'bg': s:none, 'style': s:none })
 call Highlight('VertSplit', { 'fg': s:darker_grey, 'bg': s:charcoal, 'style': s:none })
 call Highlight('StatusLine', { 'fg': s:light_grey, 'bg': s:charcoal, 'style': s:none })
 call Highlight('StatusLineNC', { 'fg': s:grey, 'bg': s:darker_grey, 'style': s:none })
-
-" Custom highlight groups
-call Highlight('ActiveWindow', { 'bg': s:charcoal })
-call Highlight('InactiveWindow', { 'bg': s:light_charcoal })
-
 call Highlight('Exception', { 'fg': s:magenta, 'bg': s:none, 'style': s:bold })
 call Highlight('MatchParen', { 'fg': s:magenta, 'bg': s:none, 'style': s:bold_underline })
 call Highlight('Include', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
