@@ -1,35 +1,41 @@
-# vim-monokai-tasty
+# `vim-monokai-tasty`
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-blueviolet.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 ![Last commit](https://img.shields.io/github/last-commit/patstockwell/vim-monokai-tasty?color=blue)
-[![Donate with Bitcoin](https://en.cryptobadges.io/badge/small/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)](https://en.cryptobadges.io/donate/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)
 
-Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
-It works for all languages, and is particularly good for JavaScript and TypeScript development :heart:
+Monokai forever! 🎉 Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
+It works for all languages, and is particularly good for JavaScript and TypeScript development ❤️
 
-Unlike other monokai implementations, `vim-monokai-tasty` targets named syntax groups from a variety of modern syntax group plugins (listed below). _*74% tastier than competitors_ :taco:
+Unlike other monokai implementations, `vim-monokai-tasty` targets named syntax groups from a variety of plugins (listed below). <sup>1</sup>_This colorscheme is 74% tastier than competitors_ 🌮
 
-*according to me
+<sup>1</sup>according to me
 
 ![](./images/example_main.png)
 
-## :electric_plug: Installation
+## 🔌 Installation
 
-I recommend using [Plug](https://github.com/junegunn/vim-plug).
+If you use _pathogen_
+```bash
+git clone https://github.com/patstockwell/vim-monokai-tasty.git ~/.vim/bundle/vim-monokai-tasty
+```
 
-Add the following to your `.vimrc` and run `PlugInstall`
-
+If you use _vim-plug_, add the following and run `:PlugInstall`
 ```vim
 Plug 'patstockwell/vim-monokai-tasty'
 ```
 
-If you use _Vundle_:
+If you use _Vundle_, add the following and run `:PluginInstall`
 ```vim
 Plugin 'patstockwell/vim-monokai-tasty'
 ```
 
-## :wolf: Use
+If you use _minpac_, add the following and run `:call minpac#update()`
+```vim
+call minpac#add('vim-jp/syntax-vim-ex')
+```
+
+## 🐺 Use
 
 Add the following to your `.vimrc` (after the Plug declaration):
 ```vim
@@ -42,11 +48,15 @@ let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 ```
 
+If you want the slightly darker blue [variant of monokai](https://monokai.pro/) called "Machine"
+```vim
+let g:vim_monokai_tasty_machine_tint = 1
+colorscheme vim-monokai-tasty
+```
+
 To use the included [lightline.vim](https://github.com/itchyny/lightline.vim) theme:
 ```vim
-let g:lightline = {
-      \ 'colorscheme': 'monokai_tasty',
-      \ }
+let g:lightline = { 'colorscheme': 'monokai_tasty' }
 ```
 
 To use the included [vim-airline](https://github.com/vim-airline/vim-airline) theme:
@@ -54,7 +64,7 @@ To use the included [vim-airline](https://github.com/vim-airline/vim-airline) th
 let g:airline_theme='monokai_tasty'
 ```
 
-## :books: Additional plugins with targeted syntax groups
+## 📚 Additional plugins with targeted syntax groups
 For JavaScript, TypeScript, and React development, _monokai-tasty_ supports definitions from all these plugins.
 Add some of these for an even better look and feel:
 ```vim
@@ -66,18 +76,18 @@ Plug 'elzr/vim-json'
 Plug 'jparise/vim-graphql'
 ```
 
-## :crystal_ball: Extras
+## 🔮 Extras
 
 - If you use [iterm2](https://iterm2.com/) (you should), there is an included _monokai.itermcolors_ file.
 - If you use GnuCoreutils there is a _dircolors_ file (compliments the iterm colours)
 
-## :tv: Screen shots
+## 📺 Screen shots
 
 ![](./images/example_javascript.png)
 ![](./images/example_vim_and_markdown.png)
 ![](./images/example_ruby.png)
 
-## :star: Example `.vimrc`
+## 🌟 Example `.vimrc`
 
 ```vim
 " put Plug declaration first
@@ -93,6 +103,7 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 let g:vim_monokai_tasty_italic = 1                    " allow italics, set this before the colorscheme
+let g:vim_monokai_tasty_machine_tint = 1              " use `mahcine` colour variant
 colorscheme vim-monokai-tasty                         " set the colorscheme
 
 " Optional themes for airline/lightline
@@ -103,14 +114,13 @@ let g:lightline = { 'colorscheme': 'monokai_tasty' }  " lightline theme
 " override it here. For example, to change the colour of the search hightlight:
 hi Search guifg=#bada55 guibg=#000000 gui=bold ctermfg=green ctermbg=black cterm=bold
 
-" If you don't know what the name of a particular hightlight is, you can use
-" `What`. It will print out the syntax group that the cursor is currently above.
-" from https://www.reddit.com/r/vim/comments/6z4aau/how_to_stop_vim_from_autohighlighting_italics_in/
-command! What echo synIDattr(synID(line('.'), col('.'), 1), 'name')
-
+" If you want to know what the name of a particular hightlight is, you can use
+" `:What`. It prints out the syntax group that the cursor is currently above.
+" https://www.reddit.com/r/vim/comments/6z4aau/how_to_stop_vim_from_autohighlighting_italics_in/
+command! What echomsg synIDattr(synID(line('.'), col('.'), 1), 'name')
 ```
 
-## :art: Colour palette
+## 🎨 Colour palette
 
 | Colour name      |Colour Code | Colour
 |------------------|------------|------------------------------------------------------------
@@ -121,9 +131,9 @@ command! What echo synIDattr(synID(line('.'), col('.'), 1), 'name')
 | Magenta          | `#FC1A70`  |![#FC1A70](https://place-hold.it/100x40/FC1A70/000000?text=+)
 | Orange           | `#FF9700`  |![#FF9700](https://place-hold.it/100x40/FF9700/000000?text=+)
 
-## :building_construction: Support
+## 🏗 Support
 If you like `vim-monokai-tasty` or find this plugin useful, you can support me by donating bitcoin to the following address.
 
-[![Donate with Bitcoin](https://en.cryptobadges.io/badge/small/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)](https://en.cryptobadges.io/donate/1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq)
+`1AddzniWjahrTidwC1QhBkcX7RYwn2JVoq`
 
 ![](qr-code.png)
