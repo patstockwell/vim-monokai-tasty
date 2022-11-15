@@ -42,6 +42,10 @@ let s:orange = { 'cterm': 208, 'gui': '#FF9700' }
 " C16777 - magenta (muted)
 " B68657 - orange (muted)
 
+if !exists('g:vim_monokai_tasty_machine_tint')
+  let g:vim_monokai_tasty_machine_tint = 0
+endif
+
 if g:vim_monokai_tasty_machine_tint == 1
   " Monokai 'machine'
   " Monochrome in order light -> dark
