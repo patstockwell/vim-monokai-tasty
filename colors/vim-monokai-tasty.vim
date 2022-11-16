@@ -539,8 +539,12 @@ call Highlight('CalRuler', { 'fg': s:grey, 'bg': s:darker_grey, 'style': s:bold 
 " }}}
 
 " Markdown {{{
-call Highlight('markdownCode', { 'fg': s:light_grey, 'bg': s:none, 'style': s:bold })
-call Highlight('markdownCodeDelimiter', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
+call Highlight('markdownCode', { 'fg': s:purple, 'bg': s:none, 'style': s:bold })
+call Highlight('markdownCodeDelimiter', { 'fg': s:light_green })
+call Highlight('markdownLinkTextDelimiter', { 'fg': s:light_blue })
+call Highlight('markdownLinkDelimiter', { 'fg': s:light_blue })
+call Highlight('markdownUrl', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+call Highlight('markdownListMarker', { 'fg': s:light_blue })
 
 " Markdown https://github.com/plasticboy/vim-markdown
 call Highlight('mkdHeading', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
