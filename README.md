@@ -54,6 +54,12 @@ let g:vim_monokai_tasty_machine_tint = 1
 colorscheme vim-monokai-tasty
 ```
 
+If you want to make the active window stand out, add
+```vim
+let g:vim_monokai_tasty_highlight_active_window = 1
+colorscheme vim-monokai-tasty
+```
+
 To use the included [lightline.vim](https://github.com/itchyny/lightline.vim) theme:
 ```vim
 let g:lightline = { 'colorscheme': 'monokai_tasty' }
@@ -104,6 +110,7 @@ call plug#end()
 
 let g:vim_monokai_tasty_italic = 1                    " allow italics, set this before the colorscheme
 let g:vim_monokai_tasty_machine_tint = 1              " use `mahcine` colour variant
+let g:vim_monokai_tasty_highlight_active_window = 1   " make the active window stand out
 colorscheme vim-monokai-tasty                         " set the colorscheme
 
 " Optional themes for airline/lightline
