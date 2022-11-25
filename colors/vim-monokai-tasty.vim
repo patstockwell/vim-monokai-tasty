@@ -13,21 +13,21 @@ endif
 
 let g:colors_name = 'vim-monokai-tasty'
 
-" Set Italics {{{
-" If user has not set italics, set based on terminal support
-if !exists('g:vim_monokai_tasty_italic')
-  if has('gui_running') || $TERM_ITALICS == 'true'
-    let g:vim_monokai_tasty_italic = 1
-  else
-    let g:vim_monokai_tasty_italic = 0
-  endif
-endif
-
-if g:vim_monokai_tasty_italic
-  let s:italic = { 'cterm': 'italic', 'gui': 'italic' }
-else
-  let s:italic = { 'cterm': 'NONE', 'gui': 'NONE' }
-endif
+" Highlight function helper {{{
+function! Highlight(group, colour)
+  let l:foreground = exists('a:colour.fg')
+        \ ? ' ctermfg=' . a:colour.fg.cterm . ' guifg=' . a:colour.fg.gui
+        \ : ''
+  let l:background = exists('a:colour.bg')
+        \ ? ' ctermbg=' . a:colour.bg.cterm . ' guibg=' . a:colour.bg.gui
+        \ : ''
+  let l:style = exists('a:colour.style')
+        \ ? ' cterm=' . a:colour.style.cterm . ' gui=' . a:colour.style.gui
+        \ : ''
+  let l:highlight_command = 'hi '
+        \ . a:group . l:foreground . l:background . l:style
+  exec l:highlight_command
+endfunction
 " }}}
 
 " Colours {{{
@@ -42,6 +42,26 @@ let s:orange = { 'cterm': 208, 'gui': '#FF9700' }
 " C16777 - magenta (muted)
 " B68657 - orange (muted)
 
+let s:off_white = { 'cterm': 251, 'gui': '#CCCCCC' }
+let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
+let s:black = { 'cterm': 0, 'gui': '#000000' }
+
+" Git diff colours.
+let s:danger = { 'cterm': 197, 'gui': '#FF005F' }
+let s:olive = { 'cterm': 64, 'gui': '#5F8700' }
+let s:dark_red = { 'cterm': 88, 'gui': '#870000' }
+let s:blood_red = { 'cterm': 52, 'gui': '#5F0000' }
+let s:dark_green = { 'cterm': 22, 'gui': '#005F00' }
+let s:bright_blue = { 'cterm': 33, 'gui': '#0087FF' }
+let s:purple_slate = { 'cterm': 60, 'gui': '#5F5F87' }
+
+let s:none = { 'cterm': 'NONE', 'gui': 'NONE' }
+let s:bold = { 'cterm': 'bold', 'gui': 'bold' }
+let s:underline = { 'cterm': 'underline', 'gui': 'underline' }
+let s:bold_underline = { 'cterm': 'bold,underline', 'gui': 'bold,underline' }
+" }}}
+
+" Config - vim_monokai_tasty_machine_tint {{{
 if !exists('g:vim_monokai_tasty_machine_tint')
   let g:vim_monokai_tasty_machine_tint = 0
 endif
@@ -68,48 +88,33 @@ else
   let s:yellow = { 'cterm': 228, 'gui': '#FFFF87' }
 endif
 
-let s:off_white = { 'cterm': 251, 'gui': '#CCCCCC' }
-let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
-let s:black = { 'cterm': 0, 'gui': '#000000' }
-
-" Git diff colours.
-let s:danger = { 'cterm': 197, 'gui': '#FF005F' }
-let s:olive = { 'cterm': 64, 'gui': '#5F8700' }
-let s:dark_red = { 'cterm': 88, 'gui': '#870000' }
-let s:blood_red = { 'cterm': 52, 'gui': '#5F0000' }
-let s:dark_green = { 'cterm': 22, 'gui': '#005F00' }
-let s:bright_blue = { 'cterm': 33, 'gui': '#0087FF' }
-let s:purple_slate = { 'cterm': 60, 'gui': '#5F5F87' }
-
-let s:none = { 'cterm': 'NONE', 'gui': 'NONE' }
-let s:bold = { 'cterm': 'bold', 'gui': 'bold' }
-let s:underline = { 'cterm': 'underline', 'gui': 'underline' }
-let s:bold_underline = { 'cterm': 'bold,underline', 'gui': 'bold,underline' }
 " }}}
 
-" Highlight function helper {{{
-function! Highlight(group, colour)
-  let l:foreground = exists('a:colour.fg')
-        \ ? ' ctermfg=' . a:colour.fg.cterm . ' guifg=' . a:colour.fg.gui
-        \ : ''
-  let l:background = exists('a:colour.bg')
-        \ ? ' ctermbg=' . a:colour.bg.cterm . ' guibg=' . a:colour.bg.gui
-        \ : ''
-  let l:style = exists('a:colour.style')
-        \ ? ' cterm=' . a:colour.style.cterm . ' gui=' . a:colour.style.gui
-        \ : ''
-  let l:highlight_command = 'hi '
-        \ . a:group . l:foreground . l:background . l:style
-  exec l:highlight_command
-endfunction
+" Config - vim_monokai_tasty_italic {{{
+" If user has not set italics, set based on terminal support
+if !exists('g:vim_monokai_tasty_italic')
+  if has('gui_running') || $TERM_ITALICS == 'true'
+    let g:vim_monokai_tasty_italic = 1
+  else
+    let g:vim_monokai_tasty_italic = 0
+  endif
+endif
+
+if g:vim_monokai_tasty_italic
+  let s:italic = { 'cterm': 'italic', 'gui': 'italic' }
+else
+  let s:italic = { 'cterm': 'NONE', 'gui': 'NONE' }
+endif
 " }}}
 
+" Config - vim_monokai_tasty_highlight_active_window {{{
 if !exists('g:vim_monokai_tasty_highlight_active_window')
   let g:vim_monokai_tasty_highlight_active_window = 0
 endif
 if g:vim_monokai_tasty_highlight_active_window == 1
   call Highlight('NormalNC', { 'fg': s:off_white, 'bg': s:light_charcoal, 'style': s:none })
 endif
+" }}}
 
 " Base highlights {{{
 call Highlight('Normal', { 'fg': s:white, 'bg': s:charcoal, 'style': s:none })
