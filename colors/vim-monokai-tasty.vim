@@ -104,9 +104,15 @@ function! Highlight(group, colour)
 endfunction
 " }}}
 
+if !exists('g:vim_monokai_tasty_highlight_active_window')
+  let g:vim_monokai_tasty_highlight_active_window = 0
+endif
+if g:vim_monokai_tasty_highlight_active_window == 1
+  call Highlight('NormalNC', { 'fg': s:off_white, 'bg': s:light_charcoal, 'style': s:none })
+endif
+
 " Base highlights {{{
 call Highlight('Normal', { 'fg': s:white, 'bg': s:charcoal, 'style': s:none })
-call Highlight('NormalNC', { 'fg': s:off_white, 'bg': s:light_charcoal, 'style': s:none })
 call Highlight('Cursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('lCursor', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
 call Highlight('CursorIM', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:none })
