@@ -2,9 +2,6 @@
 "
 " Author: Patrick Stockwell <mail@deciphr.net>
 "
-if exists('g:loaded_vim_monokai_tasty')
-  finish
-endif
 
 hi clear
 if exists('syntax_on')
@@ -632,5 +629,3 @@ hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
-
-let g:loaded_vim_monokai_tasty = 1
