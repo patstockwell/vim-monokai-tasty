@@ -629,7 +629,7 @@ call Highlight('DiagnosticUnderlineHint', { 'fg': s:none, 'bg': s:none, 'style':
 hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
 " }}}
 
-if (has('nvim'))
+if (has('nvim-0.8'))
   " Neovim specific Treesitter highlights
 
   " Python {{{
