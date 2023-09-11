@@ -483,6 +483,7 @@ call Highlight('scalaExceptionn', { 'fg': s:magenta, 'style': s:bold })
 call Highlight('scalaPackage', { 'fg': s:light_blue, 'style': s:italic })
 call Highlight('scalaPackageDeclaration', { 'fg': s:light_green })
 call Highlight('scalaAssignment', { 'fg': s:magenta })
+call Highlight('scalaTodo', { 'fg': s:yellow, 'bg': s:darker_grey, 'style': s:bold_underline })
 
 " Treesitter highlights
 call Highlight('@parameter.scala', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
@@ -495,6 +496,9 @@ call Highlight('@method.call.scala', { 'fg': s:none, 'bg': s:none, 'style': s:no
 call Highlight('@function.call.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('@property.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 call Highlight('@punctuation.bracket.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+call Highlight('@namespace.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+call Highlight('@conditional.scala', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
+call Highlight('@variable.builtin.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 " }}}
 
 " GraphQL {{{
