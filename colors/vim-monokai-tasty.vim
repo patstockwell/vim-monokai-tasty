@@ -1,6 +1,7 @@
 " Vim color file
 "
-" Author: Patrick Stockwell <mail@deciphr.net>
+" Author: Patrick Stockwell
+" Email: mail@deciphr.net
 "
 
 hi clear
@@ -484,22 +485,8 @@ call Highlight('scalaPackage', { 'fg': s:light_blue, 'style': s:italic })
 call Highlight('scalaPackageDeclaration', { 'fg': s:light_green })
 call Highlight('scalaAssignment', { 'fg': s:magenta })
 call Highlight('scalaTodo', { 'fg': s:yellow, 'bg': s:darker_grey, 'style': s:bold_underline })
-
-" Treesitter highlights
-call Highlight('@parameter.scala', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
-call Highlight('@type.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
-call Highlight('@variable.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-call Highlight('@type.qualifier.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
-call Highlight('@method.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
-call Highlight('@function.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
-call Highlight('@method.call.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-call Highlight('@function.call.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-call Highlight('@property.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-call Highlight('@punctuation.bracket.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-call Highlight('@namespace.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
-call Highlight('@conditional.scala', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
-call Highlight('@variable.builtin.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 " }}}
+
 
 " GraphQL {{{
 call Highlight('graphqlStructure', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
@@ -615,20 +602,6 @@ call Highlight('pythonExClass', { 'fg': s:light_blue, 'bg': s:none, 'style': s:i
 hi link pythonTripleQuotes Comment
 hi link pythonDoctest Comment
 hi link pythonDoctest2 Comment
-
-" Treesitter highlights
-call Highlight('@constructor.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
-call Highlight('@field.python', { 'fg': s:white, 'bg': s:none, 'style': s:none })
-call Highlight('@function.builtin.python', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
-call Highlight('@keyword.function.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
-call Highlight('@parameter.python', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
-call Highlight('@preproc.python', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
-call Highlight('@punctuation.delimiter.python', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
-call Highlight('@string.documentation.python', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
-call Highlight('@type.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
-call Highlight('@type.builtin.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
-call Highlight('@variable.builtin.python', { 'fg': s:light_grey, 'bg': s:none, 'style': s:italic })
-call Highlight('@variable.python', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 " }}}
 
 " netrw {{{
@@ -655,6 +628,41 @@ hi link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
 call Highlight('DiagnosticUnderlineHint', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
 hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
 " }}}
+
+if (has('nvim'))
+  " Neovim specific Treesitter highlights
+
+  " Python {{{
+  call Highlight('@constructor.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+  call Highlight('@field.python', { 'fg': s:white, 'bg': s:none, 'style': s:none })
+  call Highlight('@function.builtin.python', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+  call Highlight('@keyword.function.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+  call Highlight('@parameter.python', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
+  call Highlight('@preproc.python', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
+  call Highlight('@punctuation.delimiter.python', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
+  call Highlight('@string.documentation.python', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
+  call Highlight('@type.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+  call Highlight('@type.builtin.python', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+  call Highlight('@variable.builtin.python', { 'fg': s:light_grey, 'bg': s:none, 'style': s:italic })
+  call Highlight('@variable.python', { 'fg': s:white, 'bg': s:none, 'style': s:none })
+  " }}}
+
+  " Scala {{{
+  call Highlight('@parameter.scala', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
+  call Highlight('@type.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+  call Highlight('@variable.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@type.qualifier.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+  call Highlight('@method.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+  call Highlight('@function.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+  call Highlight('@method.call.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@function.call.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@property.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@punctuation.bracket.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@namespace.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+  call Highlight('@conditional.scala', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
+  call Highlight('@variable.builtin.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+  " }}}
+endif
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
