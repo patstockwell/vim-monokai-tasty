@@ -591,6 +591,10 @@ call Highlight('GitGutterDelete', { 'fg': s:magenta, 'bg': s:none, 'style': s:no
 call Highlight('GitGutterChangeDelete', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
 " }}}
 
+" Dirvish {{{
+call Highlight('DirvishPathTail', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+" }}}
+
 " Python {{{
 call Highlight('pythonBuiltin', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('pythonBuiltinFunc', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
