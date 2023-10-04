@@ -665,7 +665,7 @@ if (has('nvim-0.8'))
   call Highlight('@conditional.scala', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
   call Highlight('@variable.builtin.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
   " LSP semantic highlights
-  call Highlight('@lsp.type.parameter.scala', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.parameter.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.namespace.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.method.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.variable.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
