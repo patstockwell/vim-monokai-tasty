@@ -487,7 +487,6 @@ call Highlight('scalaAssignment', { 'fg': s:magenta })
 call Highlight('scalaTodo', { 'fg': s:yellow, 'bg': s:darker_grey, 'style': s:bold_underline })
 " }}}
 
-
 " GraphQL {{{
 call Highlight('graphqlStructure', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('graphqlBraces', { 'fg': s:white, 'bg': s:none, 'style': s:none })
@@ -662,9 +661,15 @@ if (has('nvim-0.8'))
   call Highlight('@function.call.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@property.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@punctuation.bracket.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
-  call Highlight('@namespace.scala', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
+  call Highlight('@namespace.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@conditional.scala', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
   call Highlight('@variable.builtin.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+  " LSP semantic highlights
+  call Highlight('@lsp.type.parameter.scala', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.namespace.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.method.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.variable.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.class.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   " }}}
 endif
 
