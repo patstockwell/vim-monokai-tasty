@@ -40,6 +40,7 @@ let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
 let s:black = { 'cterm': 0, 'gui': '#000000' }
 
 let s:danger = { 'cterm': 197, 'gui': '#FF005F' }
+let s:dark_highlight = { 'cterm': 0, 'gui': '#0B0E10' }
 
 " Git diff colours.
 let s:diff_delete_fg = { 'cterm': 1, 'gui': '#5F0000' }
@@ -197,8 +198,8 @@ call Highlight('Label', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('String', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('Todo', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:bold })
 call Highlight('Underlined', { 'fg': s:none, 'bg': s:none, 'style': s:underline })
-call Highlight('Pmenu', { 'fg': s:light_blue, 'bg': s:darker_grey, 'style': s:none })
-call Highlight('PmenuSel', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:none })
+call Highlight('Pmenu', { 'fg': s:light_blue, 'bg': s:dark_highlight, 'style': s:none })
+call Highlight('PmenuSel', { 'fg': s:yellow, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('PmenuSbar', { 'fg': s:none, 'bg': s:grey, 'style': s:none })
 call Highlight('PmenuThumb', { 'fg': s:dark_grey, 'bg': s:white, 'style': s:none })
 call Highlight('MoreMsg', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
