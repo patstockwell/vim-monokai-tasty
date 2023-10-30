@@ -34,11 +34,6 @@ let s:light_green = { 'cterm': 148, 'gui': '#A4E400' }
 let s:light_blue = { 'cterm': 81, 'gui': '#62D8F1' }
 let s:magenta = { 'cterm': 197, 'gui': '#FC1A70' }
 let s:orange = { 'cterm': 208, 'gui': '#FF9700' }
-" A296C7 - purple (muted)
-" A8E393 - light green (muted)
-" 6DB6CF - light blue (muted)
-" C16777 - magenta (muted)
-" B68657 - orange (muted)
 
 let s:off_white = { 'cterm': 251, 'gui': '#CCCCCC' }
 let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
