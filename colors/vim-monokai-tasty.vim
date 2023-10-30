@@ -66,8 +66,8 @@ if g:vim_monokai_tasty_machine_tint == 1
   let s:grey = { 'cterm': 245, 'gui': '#576266' }
   let s:dark_grey = { 'cterm': 59, 'gui': '#354044' }
   let s:darker_grey = { 'cterm': 238, 'gui': '#242F35' }
-  let s:light_charcoal = { 'cterm': 238, 'gui': '#1A2225' }
-  let s:charcoal = { 'cterm': 235, 'gui': '#171C20' }
+  let s:light_charcoal = { 'cterm': 235, 'gui': '#1A2225' }
+  let s:charcoal = { 'cterm': 233, 'gui': '#171C20' }
   let s:yellow = { 'cterm': 228, 'gui': '#F6F557' }
 else
   " Monokai classic
