@@ -467,7 +467,7 @@ call Highlight('typescriptTSParameter', { 'fg': s:orange, 'bg': s:none, 'style':
 
 " Scala {{{
 call Highlight('scalaExternal', { 'fg': s:light_blue, 'style': s:italic })
-call Highlight('scalaKeyword', { 'fg': s:light_blue, 'style': s:italic })
+call Highlight('scalaKeyword', { 'fg': s:magenta, 'style': s:italic })
 call Highlight('scalaTypeDeclaration', { 'fg': s:light_blue, 'style': s:italic })
 call Highlight('scalaCapitalWord', { 'fg': s:light_blue })
 call Highlight('scalaInstanceDeclaration', { 'fg': s:light_green })
