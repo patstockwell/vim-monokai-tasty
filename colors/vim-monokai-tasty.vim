@@ -39,14 +39,14 @@ let s:off_white = { 'cterm': 251, 'gui': '#CCCCCC' }
 let s:white = { 'cterm': 231, 'gui': '#FFFFFF' }
 let s:black = { 'cterm': 0, 'gui': '#000000' }
 
-" Git diff colours.
 let s:danger = { 'cterm': 197, 'gui': '#FF005F' }
-let s:olive = { 'cterm': 64, 'gui': '#5F8700' }
-let s:dark_red = { 'cterm': 88, 'gui': '#870000' }
-let s:blood_red = { 'cterm': 52, 'gui': '#5F0000' }
-let s:dark_green = { 'cterm': 22, 'gui': '#005F00' }
-let s:bright_blue = { 'cterm': 33, 'gui': '#0087FF' }
-let s:purple_slate = { 'cterm': 60, 'gui': '#5F5F87' }
+
+" Git diff colours.
+let s:diff_delete_fg = { 'cterm': 1, 'gui': '#5F0000' }
+let s:diff_delete_bg = { 'cterm': 52, 'gui': '#3B0E10' }
+let s:dark_green = { 'cterm': 22, 'gui': '#0f3315' }
+let s:diff_text = { 'cterm': 33, 'gui': '#3B3E54' }
+let s:diff_change = { 'cterm': 60, 'gui': '#252b3e' }
 
 let s:none = { 'cterm': 'NONE', 'gui': 'NONE' }
 let s:bold = { 'cterm': 'bold', 'gui': 'bold' }
@@ -158,9 +158,9 @@ call Highlight('Operator', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('PreProc', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('Statement', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
 call Highlight('Repeat', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
-call Highlight('DiffChange', { 'fg': s:white, 'bg': s:purple_slate, 'style': s:none })
-call Highlight('DiffText', { 'fg': s:white, 'bg': s:bright_blue, 'style': s:bold })
-call Highlight('DiffDelete', { 'fg': s:dark_red, 'bg': s:blood_red, 'style': s:none })
+call Highlight('DiffChange', { 'fg': s:none, 'bg': s:diff_change, 'style': s:none })
+call Highlight('DiffText', { 'fg': s:none, 'bg': s:diff_text, 'style': s:bold })
+call Highlight('DiffDelete', { 'fg': s:diff_delete_fg, 'bg': s:diff_delete_bg, 'style': s:none })
 call Highlight('DiffAdd', { 'fg': s:none, 'bg': s:dark_green, 'style': s:none })
 call Highlight('diffAdded', { 'fg': s:light_green, 'bg': s:none, 'style': s:none })
 call Highlight('diffRemoved', { 'fg': s:magenta, 'bg': s:none, 'style': s:none })
