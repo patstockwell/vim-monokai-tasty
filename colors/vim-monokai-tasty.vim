@@ -481,6 +481,7 @@ call Highlight('scalaPackage', { 'fg': s:light_blue, 'style': s:italic })
 call Highlight('scalaPackageDeclaration', { 'fg': s:light_green })
 call Highlight('scalaAssignment', { 'fg': s:magenta })
 call Highlight('scalaTodo', { 'fg': s:yellow, 'bg': s:darker_grey, 'style': s:bold_underline })
+call Highlight('scalaUnimplemented', { 'fg': s:magenta, 'bg': s:none, 'style': s:italic })
 " }}}
 
 " GraphQL {{{
