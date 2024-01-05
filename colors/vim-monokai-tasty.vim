@@ -668,6 +668,26 @@ if (has('nvim-0.8'))
   call Highlight('@lsp.type.variable.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.class.scala', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   " }}}
+
+  " TypeScript {{{
+  call Highlight('@lsp.type.parameter.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.variable.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.property.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.namespace.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  " }}}
+
+  " TypeScript React (TSX) {{{
+  call Highlight('@lsp.type.parameter.typescript.tsx', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.variable.typescript.tsx', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.property.typescript.tsx', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.namespace.typescript.tsx', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  " }}}
+
+  " JavaScript {{{
+  call Highlight('@lsp.type.parameter.javascript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.variable.javascript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.namespace.javascript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  " }}}
 endif
 
 " Must be at the end, because of ctermbg=234 bug.
