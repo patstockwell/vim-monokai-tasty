@@ -686,6 +686,7 @@ if (has('nvim-0.8'))
   " JavaScript {{{
   call Highlight('@lsp.type.parameter.javascript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.variable.javascript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.property.javascript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.namespace.javascript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   " }}}
 endif
