@@ -213,22 +213,27 @@ call Highlight('StatusLineGitBranch', { 'fg': s:white, 'bg': s:dark_grey, 'style
 call Highlight('StatusLineModifiedFile', { 'fg': s:orange, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('StatusLineReadOnlyFile', { 'fg': s:grey, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('StatusLineSeparatorGitBranch', { 'fg': s:dark_grey, 'bg': s:darker_grey, 'style': s:none })
+" Normal mode
 call Highlight('StatusLineSeparatorNormalDark', { 'fg': s:light_green, 'bg': s:dark_grey, 'style': s:none })
-call Highlight('StatusLineSeparatorVisualDark', { 'fg': s:purple, 'bg': s:dark_grey, 'style': s:none })
-call Highlight('StatusLineSeparatorInsertDark', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:none })
-call Highlight('StatusLineSeparatorCommandDark', { 'fg': s:light_blue, 'bg': s:dark_grey, 'style': s:none })
 call Highlight('StatusLineSeparatorNormal', { 'fg': s:light_green, 'bg': s:darker_grey, 'style': s:none })
-call Highlight('StatusLineSeparatorVisual', { 'fg': s:purple, 'bg': s:darker_grey, 'style': s:none })
-call Highlight('StatusLineSeparatorInsert', { 'fg': s:yellow, 'bg': s:darker_grey, 'style': s:none })
-call Highlight('StatusLineSeparatorCommand', { 'fg': s:light_blue, 'bg': s:darker_grey, 'style': s:none })
 call Highlight('StatusLineNormalMode', { 'fg': s:charcoal, 'bg': s:light_green })
-call Highlight('StatusLineVisualMode', { 'fg': s:charcoal, 'bg': s:purple })
-call Highlight('StatusLineInsertMode', { 'fg': s:charcoal, 'bg': s:yellow })
-call Highlight('StatusLineCommandMode', { 'fg': s:charcoal, 'bg': s:light_blue })
 call Highlight('StatusLineNormalModeBold', { 'fg': s:charcoal, 'bg': s:light_green, 'style': s:bold })
+"Visual mode
+call Highlight('StatusLineSeparatorVisualDark', { 'fg': s:purple, 'bg': s:dark_grey, 'style': s:none })
+call Highlight('StatusLineSeparatorVisual', { 'fg': s:purple, 'bg': s:darker_grey, 'style': s:none })
+call Highlight('StatusLineVisualMode', { 'fg': s:charcoal, 'bg': s:purple })
 call Highlight('StatusLineVisualModeBold', { 'fg': s:charcoal, 'bg': s:purple, 'style': s:bold })
+" Insert mode
+call Highlight('StatusLineSeparatorInsertDark', { 'fg': s:yellow, 'bg': s:dark_grey, 'style': s:none })
+call Highlight('StatusLineSeparatorInsert', { 'fg': s:yellow, 'bg': s:darker_grey, 'style': s:none })
+call Highlight('StatusLineInsertMode', { 'fg': s:charcoal, 'bg': s:yellow })
 call Highlight('StatusLineInsertModeBold', { 'fg': s:charcoal, 'bg': s:yellow, 'style': s:bold })
+" Command mode
+call Highlight('StatusLineSeparatorCommandDark', { 'fg': s:light_blue, 'bg': s:dark_grey, 'style': s:none })
+call Highlight('StatusLineSeparatorCommand', { 'fg': s:light_blue, 'bg': s:darker_grey, 'style': s:none })
+call Highlight('StatusLineCommandMode', { 'fg': s:charcoal, 'bg': s:light_blue })
 call Highlight('StatusLineCommandModeBold', { 'fg': s:charcoal, 'bg': s:light_blue, 'style': s:bold })
+
 " }}}
 
 " Quickfix window {{{
