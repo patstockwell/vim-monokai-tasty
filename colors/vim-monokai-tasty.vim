@@ -618,9 +618,9 @@ call Highlight('netrwClassify', { 'fg': s:purple, 'bg': s:none, 'style': s:none 
 " Nvim LSP {{{
 call Highlight('DiagnosticError', { 'fg': { 'cterm': 197, 'gui': '#fd2c40' }})
 hi link LspDiagnosticsDefaultError DiagnosticError
-call Highlight('DiagnosticWarn', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
+call Highlight('DiagnosticWarn', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
 hi link LspDiagnosticsDefaultWarning DiagnosticWarn
-call Highlight('DiagnosticInfo', { 'fg': s:white, 'bg': s:none, 'style': s:none })
+call Highlight('DiagnosticInfo', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
 hi link LspDiagnosticsDefaultInfo DiagnosticInfo
 call Highlight('DiagnosticHint', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
 hi link LspDiagnosticsDefaultHint DiagnosticHint
