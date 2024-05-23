@@ -551,7 +551,10 @@ call Highlight('CalRuler', { 'fg': s:grey, 'bg': s:darker_grey, 'style': s:bold 
 " }}}
 
 " Markdown {{{
+highlight default link markdownTODO Todo
+
 call Highlight('markdownCode', { 'fg': s:purple, 'bg': s:none, 'style': s:bold })
+call Highlight('markdownCodeBlock', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('markdownCodeDelimiter', { 'fg': s:light_green })
 call Highlight('markdownLinkTextDelimiter', { 'fg': s:light_blue })
 call Highlight('markdownLinkDelimiter', { 'fg': s:light_blue })
