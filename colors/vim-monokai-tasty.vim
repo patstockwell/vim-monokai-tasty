@@ -675,7 +675,7 @@ if (has('nvim-0.8'))
   " }}}
 
   " TypeScript {{{
-  call Highlight('@lsp.type.parameter.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.parameter.typescript', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.variable.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.property.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.namespace.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
