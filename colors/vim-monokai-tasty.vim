@@ -655,6 +655,21 @@ if (has('nvim-0.8'))
   call Highlight('@variable.python', { 'fg': s:white, 'bg': s:none, 'style': s:none })
   " }}}
 
+  " Kotlin {{{
+  call Highlight('@function.call.kotlin', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+  call Highlight('@function.builtin.kotlin', { 'fg': s:white, 'bg': s:none, 'style': s:italic })
+  call Highlight('@punctuation.bracket.kotlin', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@punctuation.delimiter.kotlin', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
+  call Highlight('@keyword.modifier.kotlin', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
+  call Highlight('@keyword.kotlin', { 'fg': s:magenta, 'bg': s:none, 'style': s:italic })
+  call Highlight('@variable.kotlin', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.variable.kotlin', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.property.kotlin', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.class.kotlin', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
+  call Highlight('@lsp.type.function.kotlin', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.parameter.kotlin', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+  " }}}
+
   " Scala {{{
   call Highlight('@parameter.scala', { 'fg': s:orange, 'bg': s:none, 'style': s:italic })
   call Highlight('@type.scala', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
