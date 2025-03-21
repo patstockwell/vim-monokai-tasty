@@ -501,6 +501,7 @@ call Highlight('vimParenSep', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
 call Highlight('vimOperParen', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 call Highlight('vimUserFunc', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('vimFunction', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+call Highlight('helpOption', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 " }}}
 
 " XML {{{
