@@ -456,6 +456,7 @@ call Highlight('typescriptGlobalNodeObjects', { 'fg': s:magenta, 'bg': s:none, '
 call Highlight('typescriptGlobalObjects', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptArrowFunction', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptFuncCall', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+call Highlight('typescriptFuncCallArg', { 'fg': s:none, 'bg': s:none, 'style': s:none })
 
 " TypeScript Treesitter
 call Highlight('typescriptTSBoolean', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
@@ -501,6 +502,7 @@ call Highlight('vimParenSep', { 'fg': s:white, 'bg': s:none, 'style': s:bold })
 call Highlight('vimOperParen', { 'fg': s:light_blue, 'bg': s:none, 'style': s:italic })
 call Highlight('vimUserFunc', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
 call Highlight('vimFunction', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+call Highlight('vimVar', { 'fg': s:white, 'bg': s:none, 'style': s:none })
 call Highlight('helpOption', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 " }}}
 
