@@ -456,7 +456,9 @@ call Highlight('typescriptGlobalNodeObjects', { 'fg': s:magenta, 'bg': s:none, '
 call Highlight('typescriptGlobalObjects', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptArrowFunction', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 call Highlight('typescriptFuncCall', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
-call Highlight('typescriptFuncCallArg', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+call Highlight('typescriptFuncCallArg', { 'fg': s:white, 'bg': s:none, 'style': s:none })
+
+highlight default link typescriptFuncCallArg NONE
 
 " TypeScript Treesitter
 call Highlight('typescriptTSBoolean', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
@@ -711,6 +713,8 @@ if (has('nvim-0.8'))
   call Highlight('@lsp.type.variable.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.property.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.type.namespace.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.type.parameter.typescript.tsx', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
+  call Highlight('@lsp.typemod.parameter.declaration.typescript.tsx', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
   " }}}
 
   " TypeScript React (TSX) {{{
