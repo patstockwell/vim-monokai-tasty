@@ -731,6 +731,11 @@ if (has('nvim-0.8'))
 
   " Markdown {{{
   call Highlight('@markup.heading.1.markdown', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@markup.heading.2.markdown', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@markup.heading.3.markdown', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@markup.heading.4.markdown', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@markup.heading.5.markdown', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@markup.heading.6.markdown', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@markup.link.label.markdown_inline', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@markup.link.markdown_inline', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@markup.link.url.markdown_inline', { 'fg': s:none, 'bg': s:none, 'style': s:none })
