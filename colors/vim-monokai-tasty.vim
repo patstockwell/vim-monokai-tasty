@@ -716,10 +716,12 @@ if (has('nvim-0.8'))
   call Highlight('@lsp.type.parameter.typescript.tsx', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
   call Highlight('@lsp.typemod.parameter.declaration.typescript.tsx', { 'fg': s:orange, 'bg': s:none, 'style': s:none })
   call Highlight('@keyword.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
+  call Highlight('@keyword.function.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@punctuation.delimiter.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@punctuation.bracket.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@operator.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   call Highlight('@variable.builtin.typescript', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
+  call Highlight('@comment.typescript', { 'fg': s:none, 'bg': s:none, 'style': s:none })
   " }}}
 
   " TypeScript React (TSX) {{{
