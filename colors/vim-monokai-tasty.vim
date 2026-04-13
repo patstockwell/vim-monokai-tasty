@@ -651,6 +651,11 @@ call Highlight('NvimTreeGitDirtyIcon', { 'fg': s:orange, 'bg': s:none, 'style': 
 call Highlight('NvimTreeGitNewIcon', { 'fg': s:light_blue, 'bg': s:none, 'style': s:none })
 " }}}
 
+" oil.nvim {{{
+call Highlight('OilDirHidden', { 'fg': s:purple, 'bg': s:none, 'style': s:none })
+call Highlight('OilFileHidden', { 'fg': s:none, 'bg': s:none, 'style': s:italic })
+" }}}
+
 if (has('nvim-0.8'))
   " Neovim specific Treesitter highlights
 
